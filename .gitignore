@@ -1,0 +1,30 @@
+*.bat
+*.gz
+*.aux
+*.log
+*.bbl
+*.blg
+*.lot
+*.tcp
+*.toc
+*.lof
+*.fdb_latexmk
+
+# LaTeX - indici (imakeidx/makeindex) e altri file di build
+*.idx
+*.ilg
+*.ind
+*.fls
+*.out
+*.synctex.gz
+
+# Editor/OS backup
+*~
+*.bak
+*.swp
+.DS_Store
+
+# Claude Code - impostazioni locali/personali (non condividere)
+.claude/settings.local.json
+# Claude Code - file di lock locale
+.claude/scheduled_tasks.lock
