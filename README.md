@@ -46,7 +46,7 @@ Oltre ai manuali, il repository include fogli di consultazione rapida pensati pe
 
 | Strumento | Contenuto | Scarica | Sorgente |
 |---|---|:---:|:---:|
-| **Schermo del Master** | 5 pannelli A4 orizzontali con le tabelle più consultate al tavolo: THAC0, tiri salvezza, scacciare non-morti, danno armi, incantesimi al giorno, esplorazione e incontri. | [🛡️ PDF](screengem.pdf) | [`screengem.tex`](screengem.tex) |
+| **Schermo del Master** *(beta, in miglioramento)* | 5 pannelli A4 orizzontali con le tabelle più consultate al tavolo: THAC0, tiri salvezza, scacciare non-morti, danno armi, incantesimi al giorno, esplorazione e incontri. | [🛡️ PDF](screengem.pdf) | [`screengem.tex`](screengem.tex) |
 
 ## Struttura del repository
 
