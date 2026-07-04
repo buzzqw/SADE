@@ -13,7 +13,7 @@
 [![Mostri: 396](https://img.shields.io/badge/Mostri-396-8b0000.svg)](#i-manuali)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project)
 
-**[📖 Scarica il Manuale Base](SADE.pdf) · [🔮 Incantesimi](SADE-Incantesimi-vol1.pdf) · [👹 Mostruario](SADE-MonstruousManual.pdf) · [🛡️ Schermo del Master](screengem.pdf)**
+**[📖 Scarica il Manuale Base](SADE.pdf) · 🔮 Incantesimi [Vol. I](SADE-Incantesimi-vol1.pdf) / [Vol. II](SADE-Incantesimi-vol2.pdf) · [👹 Mostruario](SADE-MonstruousManual.pdf) · [🛡️ Schermo del Master](screengem.pdf)**
 
 </div>
 
