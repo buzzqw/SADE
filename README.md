@@ -86,5 +86,9 @@ S.AD.E. è un progetto scritto e mantenuto da una sola persona, nel tempo libero
 **S.AD.E.** © 2025 Andres Zanzani. Quest'opera è distribuita con licenza **Creative Commons Attribuzione - Non Commerciale - Condividi allo stesso modo 4.0 Internazionale (CC BY-NC-SA 4.0)**.
 
 Maggiori dettagli nel capitolo "Immagini e Licenza" del manuale base.
+
+### Nota legale
+
+*S.AD.E.* è un'opera fan non ufficiale, realizzata senza scopo di lucro, ispirata ad *Advanced Dungeons & Dragons 2ª Edizione* — un marchio originariamente pubblicato da TSR, Inc. e attualmente di proprietà di Wizards of the Coast, Inc. / Hasbro, Inc. Il progetto non è affiliato, approvato né sponsorizzato da Wizards of the Coast o Hasbro, e non intende infrangerne i diritti: nessun testo, illustrazione o asset protetto da copyright dei manuali originali viene qui riprodotto, l'intero regolamento è stato riscritto in forma originale. *Dungeons & Dragons* e *Advanced Dungeons & Dragons* sono marchi registrati dei rispettivi proprietari.
 </content>
 </invoke>
