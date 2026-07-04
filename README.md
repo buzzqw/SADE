@@ -5,6 +5,14 @@
 
 *Un regolamento fantasy in lingua italiana, derivato da e compatibile con AD&D 2ª Edizione*
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](#licenza)
+[![Scritto con pdfLaTeX](https://img.shields.io/badge/Scritto%20con-pdfLaTeX-008080.svg)](#compilazione)
+[![Lingua: Italiano](https://img.shields.io/badge/Lingua-Italiano-009246.svg)](#i-manuali)
+[![Pagine: 1500+](https://img.shields.io/badge/Pagine-1500%2B-blue.svg)](#i-manuali)
+[![Incantesimi: 839](https://img.shields.io/badge/Incantesimi-839-9b59b6.svg)](#i-manuali)
+[![Mostri: 396](https://img.shields.io/badge/Mostri-396-8b0000.svg)](#i-manuali)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project)
+
 **[📖 Scarica il Manuale Base](SADE.pdf) · [🔮 Incantesimi](SADE-Incantesimi-vol1.pdf) · [👹 Mostruario](SADE-MonstruousManual.pdf) · [🛡️ Schermo del Master](screengem.pdf)**
 
 </div>
@@ -25,6 +33,7 @@ Ogni pagina di questi manuali è composta a mano in LaTeX, tabella per tabella: 
 - [Strumenti da tavolo](#strumenti-da-tavolo)
 - [Struttura del repository](#struttura-del-repository)
 - [Compilazione](#compilazione)
+- [Supporta il progetto](#supporta-il-progetto)
 - [Licenza](#licenza)
 
 ---
@@ -65,6 +74,12 @@ pdflatex -interaction=nonstopmode SADE.tex   # 2-3 passate per assestare TOC/ind
 ```
 
 Gli altri file (`SADE-Incantesimi-vol1.tex`, `SADE-Incantesimi-vol2.tex`, `SADE-MonstruousManual.tex`, la scheda del personaggio e lo schermo del master) si compilano allo stesso modo, con una singola passata di `pdflatex` e senza indici multipli.
+
+## Supporta il progetto
+
+S.AD.E. è un progetto scritto e mantenuto da una sola persona, nel tempo libero, per passione verso questo gioco. Se lo trovi utile al tuo tavolo e vuoi ringraziare l'autore, puoi offrirgli un caffè tramite PayPal — ogni contributo è molto apprezzato e aiuta a tenere vivo il progetto.
+
+[![Dona con PayPal](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project)
 
 ## Licenza
 
