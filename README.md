@@ -34,19 +34,12 @@
 | [`SADE-Incantesimi-vol1.tex`](SADE-Incantesimi-vol1.tex)<br>[`SADE-Incantesimi-vol2.tex`](SADE-Incantesimi-vol2.tex) | Il compendio completo degli incantesimi, tradotto e adattato in italiano: tutta la magia del *Player's Handbook*, del *Tome of Magic* e i poteri psionici del *Complete Psionic Handbook*, divisi in due volumi. | 214 + 286 pagine |
 | [`SADE-MonstruousManual.tex`](SADE-MonstruousManual.tex) | Il mostruario completo in italiano, con tutte le creature, i valori di THAC0 per Dadi Vita e le tabelle di morale. | 653 pagine |
 
-## Ambientazione
-
-| File | Contenuto |
-|---|---|
-| [`SADE-Khorameth.tex`](SADE-Khorameth.tex) | *Khorameth, le Terre del Crepuscolo* — manuale di ambientazione per giocatori e master, compatibile con S.AD.E. e con AD&D 2E in generale. |
-
 ## Strumenti da tavolo
 
 Oltre ai manuali, il repository include alcuni fogli di consultazione rapida pensati per essere stampati e usati durante le sessioni:
 
 | File | Contenuto |
 |---|---|
-| [`scheda-latex/scheda-add2e.tex`](scheda-latex/scheda-add2e.tex) | Scheda del personaggio in italiano per AD&D 2E, 3 pagine A4 verticali, pronta da stampare e compilare a mano. |
 | [`screengem.tex`](screengem.tex) | Schermo del master: 5 pannelli A4 orizzontali con le tabelle più consultate al tavolo (THAC0, tiri salvezza, scacciare non-morti, danno armi, incantesimi al giorno, esplorazione e incontri), verificate contro il manuale base. |
 
 ## Struttura del repository
