@@ -115,6 +115,7 @@ footskip=1cm
 \usepackage{tabularx}      % Tabelle con larghezza X
 \usepackage{longtable}     % Tabelle lunghe
 \usepackage{xltabular}     % Combinazione longtable+tabularx
+\usepackage{multicoltab/multicoltab}   % Tabelle che fluiscono tra colonne multicols
 %\usepackage{ltablex}       % Estensione per longtable (opzionale)
 
 % ───────────────────────────────────────────────────────────────────
@@ -976,7 +977,7 @@ La battaglia che ne segue è feroce. Lo scheletro è veloce e i suoi colpi sono 
 
 \textbf{Sara (Lyra):} Annuisce, una mano sul pugnale. Master riesco a capire cosa dicono?
 
-\textbf{Marco (GM):} Sono troppo deboli, distorti dall'eco del passaggio. Sembrano più un lamento che delle parole vere e proprie. Il corridoio che si apre davanti a voi è diverso dal precedente: le pareti sono di marmo nero levigato e non c'è traccia di polvere o detriti. È come se il tempo si fosse fermato qui.
+\textbf{Marco (GM):} Sono troppo deboli, distorti dall'eco del passaggio. Sembrano più un lamento che delle parole vere e proprie. %Il corridoio che si apre davanti a voi è diverso dal precedente: le pareti sono di marmo nero levigato e non c'è traccia di polvere o detriti. È come se il tempo si fosse fermato qui.
 
 \textbf{Luca (Valerius):} Valerius si fa avanti, il suo simbolo sacro tenuto alto. <<Se qui dimora uno spirito inquieto, è nostro dovere dargli pace. Procediamo, ma con rispetto.>>
 
@@ -1195,13 +1196,13 @@ High Fantasy & 20 \\
 
 
 \begin{center}
-\includegraphics[keepaspectratio,width=0.7\linewidth]{immagini/dungeon2.png}
+\includegraphics[keepaspectratio,width=0.65\linewidth]{immagini/dungeon2.png}
 \end{center}
 
 \bigskip
 
 \begin{center}
-\includegraphics[keepaspectratio,width=0.7\linewidth]{immagini/dungeon3.png}
+\includegraphics[keepaspectratio,width=0.65\linewidth]{immagini/dungeon3.png}
 \end{center}
 
 
@@ -3533,7 +3534,7 @@ I paladini ricevono \textbf{60 punti personaggio (PP)}\index{Punti Personaggio!P
 \item \textbf{Circolo di Potere (5):} \index{Paladino!Abilità!Circolo di Potere} Se ha una \hyperlink{obj:Sacro Vendicatore}{spada sacra}, può proiettare un circolo di 3m di diametro intorno a lui che dissolve la magia ostile formulata da incantatori inferiori al suo livello.
 \item \textbf{Cura Malattia (10):} \index{Paladino!Abilità!Cura Malattia} Cura Malattia una volta a settimana ogni cinque livelli.
 \item \textbf{Imposizione delle Mani (5):} \index{Paladino!Abilità!Imposizione delle Mani}\index{Imposizione delle Mani} Cura se stesso o un altro con l'imposizione delle mani una volta al giorno, ripristinando 2 PF per livello.
-\item \textbf{Incantesimi da Chierico (10):} \index{Paladino!Abilità!Incantesimi} A partire dal 9$^\circ$ livello lancia incantesimi da chierico dalle sfere: Combattimento\index{Sfere (Sacerdote)!Combattimento}, Fato\index{Sfere (Sacerdote)!Fato}, Guarigione\index{Sfere (Sacerdote)!Guarigione} e Protezione\index{Sfere (Sacerdote)!Protezione}.
+\item \textbf{Incantesimi da Chierico (10):} \index{Paladino!Abilità!Incantesimi} A partire dal 9$^\circ$ livello lancia incantesimi da chierico dalle sfere: Combattimento\index{Sfere (Sacerdote)!Combattimento}, Divinazione\index{Sfere (Sacerdote)!Divinazione}, Guarigione\index{Sfere (Sacerdote)!Guarigione} e Protezione\index{Sfere (Sacerdote)!Protezione}.
 \item \textbf{Individuazione del Male (5):} \index{Paladino!Abilità!Individuare il Male} Individua il male fino a 20m di distanza.
 \item \textbf{Protezione dal Male (5):} Ha un'aura naturale di 3m che conferisce penalità di 1 ai Tiri per Colpire delle creature malvagie o evocate.
 \item \textbf{Punire il Male (10):} \index{Paladino!Abilità!Punire il Male} Una volta al giorno, sceglie un bersaglio. Se malvagio, aggiunge +4 per colpire e il suo livello ai danni; questi attacchi ignorano la RD. Ottiene anche un bonus alla CA contro quel bersaglio pari a metà del suo livello. L'effetto dura finché il bersaglio non muore. Ottiene un uso extra al 4$^\circ$ livello e ogni tre livelli successivi.
@@ -3751,21 +3752,6 @@ La conoscenza è potere, ma la vera magia non sta nell'accumularla, bensì nel c
 
 \end{multicols}
 
-\captionof{table}{Tiri Salvezza del Mago}\label{tab:ts-mago}\hypertarget{tab:ts-mago}{}
-\index{Mago!Tiri Salvezza}\index{Tiro Salvezza (TS)!Mago}
-\noindent\begin{tabularx}{\linewidth}{Xccccc}
-\toprule
-\multicolumn{6}{c}{\textbf{Tiri Salvezza}} \\
-\cmidrule(lr){2-6}
-\rowcolor{gray!20}\textbf{Livello} & \textbf{Paralisi/Veleno} & \textbf{Verga/Bacchetta} & \textbf{Pietrificazione} & \textbf{Soffio} & \textbf{Incantesimi} \\
-\rowcolor{gray!20}& \textbf{Morte Magica} & \textbf{Bastone} & \textbf{Metamorfosi} & \textbf{del Drago} & \\
-\midrule
-1-5 & 14 & 11 & 13 & 15 & 12 \\
-\rowcolor{gray!20}6-10 & 13 & 9 & 11 & 13 & 10 \\
-11-15 & 11 & 7 & 9 & 11 & 8 \\
-\rowcolor{gray!20}16-20 & 10 & 5 & 7 & 9 & 6 \\
-\bottomrule
-\end{tabularx}
 
 \captionof{table}{Livelli di Esperienza e Progressione Incantesimi del Mago}\label{tab:exp-mago}\label{tab:incantesimi-mago}\hypertarget{tab:exp-mago}{}
 \index{Mago!Tabella Esperienza}\index{Punti Esperienza (PE)!Mago}\index{Mago!Incantesimi al Giorno}
@@ -3795,6 +3781,23 @@ La conoscenza è potere, ma la vera magia non sta nell'accumularla, bensì nel c
 \rowcolor{gray!20}18 & 3.000.000 & 10+8 & 15 & 5 & 5 & 5 & 5 & 5 & 3 & 3 & 2 & 1 \\
 19 & 3.375.000 & 10+9 & 14 & 5 & 5 & 5 & 5 & 5 & 3 & 3 & 3 & 1 \\
 \rowcolor{gray!20}20 & 3.750.000 & 10+10 & 14 & 5 & 5 & 5 & 5 & 5 & 4 & 3 & 3 & 2 \\
+\bottomrule
+\end{tabularx}
+
+
+\captionof{table}{Tiri Salvezza del Mago}\label{tab:ts-mago}\hypertarget{tab:ts-mago}{}
+\index{Mago!Tiri Salvezza}\index{Tiro Salvezza (TS)!Mago}
+\noindent\begin{tabularx}{\linewidth}{Xccccc}
+\toprule
+\multicolumn{6}{c}{\textbf{Tiri Salvezza}} \\
+\cmidrule(lr){2-6}
+\rowcolor{gray!20}\textbf{Livello} & \textbf{Paralisi/Veleno} & \textbf{Verga/Bacchetta} & \textbf{Pietrificazione} & \textbf{Soffio} & \textbf{Incantesimi} \\
+\rowcolor{gray!20}& \textbf{Morte Magica} & \textbf{Bastone} & \textbf{Metamorfosi} & \textbf{del Drago} & \\
+\midrule
+1-5 & 14 & 11 & 13 & 15 & 12 \\
+\rowcolor{gray!20}6-10 & 13 & 9 & 11 & 13 & 10 \\
+11-15 & 11 & 7 & 9 & 11 & 8 \\
+\rowcolor{gray!20}16-20 & 10 & 5 & 7 & 9 & 6 \\
 \bottomrule
 \end{tabularx}
 
@@ -4322,7 +4325,7 @@ Le creature speciali includono non-morti unici, non-morti con libero arbitrio de
 I chierici sono il tipo più comune di sacerdote e sono generalmente di allineamento buono. Sono soldati robusti al servizio della loro divinità. Possono indossare armature fino alla maglia di stecche e portare uno scudo, ma sono limitati all'uso di sole armi contundenti\index{Armi!Contundenti}.
 
 
-Normalmente, un chierico spende punti personaggio per ottenere accesso completo alle sfere di tutto, astrale, charme, combattimento, creazione, necromantica, fato, guardiana, guarigione, protezione, evocazione e sole, così come accesso parziale alla sfera elementale.
+Normalmente, un chierico spende punti personaggio per ottenere accesso completo alle sfere di tutto, astrale, charme, combattimento, creazione, necromantica, divinazione, guardiana, guarigione, protezione, evocazione e sole, così come accesso parziale alla sfera elementale.
 
 I Chierici possono preparare un numero di trucchetti (incantesimi di livello 0) ogni giorno pari al numero di linguaggi bonus conosciuti, questi incantesimi non si esauriscono quando vengono lanciati (variante SADE).
 
@@ -4355,7 +4358,8 @@ Il Fato va come deve. (Beowulf (traduzione del detto anglosassone \emph{Wyrd oft
 \end{itemize}
 
 \captionof{table}{Costi in Punti per Accesso alle Sfere}\label{tab:costi-sfere}\index{Sfere (Sacerdote)!Costi}\hypertarget{tab:costi-sfere}{}
-\noindent\begin{tabularx}{\linewidth}{X c c}
+\noindent
+\begin{multicoltab}{X c c}
 \toprule
 \rowcolor{gray!20}\textbf{Sfera} & \textbf{Parziale} & \textbf{Completo} \\
 \midrule
@@ -4371,12 +4375,6 @@ Evocazione & 5 & 10 \\
 \rowcolor{gray!20}Fato & 3 & 5 \\
 Guardiana & 3 & 5 \\
 \rowcolor{gray!20}Guarigione & 5 & 10 \\
-\end{tabularx}
-
-\noindent\begin{tabularx}{\linewidth}{X c c}
-\toprule
-\rowcolor{gray!20}\textbf{Sfera} & \textbf{Parziale} & \textbf{Completo} \\
-\midrule
 Legge & 5 & 8 \\
 \rowcolor{gray!20}Necromantica & 5 & 10 \\
 Numeri & 5 & 10 \\
@@ -4389,7 +4387,7 @@ Tempo Atmosferico & 5 & 10 \\
 \rowcolor{gray!20}Tutto & 3 & 5 \\
 Viaggio & 3 & 5 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 \medskip
@@ -4913,7 +4911,6 @@ Queste statistiche sono un esempio; il Game Master può approvare o creare alter
 \item \textbf{Atterramento:} Se colpisce, può tentare di atterrare l'avversario.
 \end{itemize}
 
-\pagebreak
 
 \sottoclasse{Monaco}
 
@@ -5488,25 +5485,6 @@ La spada più affilata non vale nulla contro una porta chiusa a chiave. La magia
 \end{enfasi}\medskip
 
 
-% Tabella 2: Tiri Salvezza
-\captionof{table}{Tiri Salvezza delle Canaglie}\label{tab:ts-canaglia}\hypertarget{tab:ts-canaglia}{}
-\index{Tiro Salvezza (TS)!Canaglia}\index{Ladro!Tiri Salvezza}\index{Bardo!Tiri Salvezza}
-\noindent\begin{tabularx}{\linewidth}{cXXXXX}
-\toprule
-\rowcolor{gray!20} \textbf{Livello} & \multicolumn{5}{c}{Tiri Salvezza}\\
-
-& \textbf{Paralisi,} & \textbf{Verga} & \textbf{Pietrificazione,} & \textbf{Soffio} & \textbf{Incantesimi} \\
-& \textbf{Veleno} & \textbf{Bacchetta} & \textbf{Metamorfosi} & \textbf{del} &  \\
-& \textbf{Morte Magica} & \textbf{Bastone} &  & \textbf{Drago} &  \\
-
-\midrule
-1--4 & 13 & 14 & 12 & 16 & 15 \\
-\rowcolor{gray!20}5--8 & 12 & 12 & 11 & 15 & 13 \\
-9--12 & 11 & 10 & 10 & 14 & 11 \\
-\rowcolor{gray!20}13--16 & 10 & 8 & 9 & 13 & 9 \\
-17--20 & 9 & 6 & 8 & 12 & 7 \\
-\bottomrule
-\end{tabularx}
 
 % Tabella 1: Progressione PE, DV e THAC0
 \captionof{table}{Progressione Completa delle Canaglie}\label{tab:progressione-canaglia-completa}\label{tab:exp-canaglia}\hypertarget{tab:progressione-canaglia-completa}{}
@@ -5542,6 +5520,25 @@ La spada più affilata non vale nulla contro una porta chiusa a chiave. La magia
 
 
 
+% Tabella 2: Tiri Salvezza
+\captionof{table}{Tiri Salvezza delle Canaglie}\label{tab:ts-canaglia}\hypertarget{tab:ts-canaglia}{}
+\index{Tiro Salvezza (TS)!Canaglia}\index{Ladro!Tiri Salvezza}\index{Bardo!Tiri Salvezza}
+\noindent\begin{tabularx}{\linewidth}{cXXXXX}
+\toprule
+\rowcolor{gray!20} \textbf{Livello} & \multicolumn{5}{c}{Tiri Salvezza}\\
+
+& \textbf{Paralisi,} & \textbf{Verga} & \textbf{Pietrificazione,} & \textbf{Soffio} & \textbf{Incantesimi} \\
+& \textbf{Veleno} & \textbf{Bacchetta} & \textbf{Metamorfosi} & \textbf{del} &  \\
+& \textbf{Morte Magica} & \textbf{Bastone} &  & \textbf{Drago} &  \\
+
+\midrule
+1--4 & 13 & 14 & 12 & 16 & 15 \\
+\rowcolor{gray!20}5--8 & 12 & 12 & 11 & 15 & 13 \\
+9--12 & 11 & 10 & 10 & 14 & 11 \\
+\rowcolor{gray!20}13--16 & 10 & 8 & 9 & 13 & 9 \\
+17--20 & 9 & 6 & 8 & 12 & 7 \\
+\bottomrule
+\end{tabularx}
 
 
 \begin{multicols}{2}
@@ -6911,14 +6908,14 @@ Temuto, disprezzato e frainteso, il Necromante studia i segreti ultimi dell'esis
 \textbf{Classi Consentite:} Mago.
 
 
-\begin{enfasi}
-La strega è una praticante di magia che vive ai margini della società. La sua conoscenza deriva da antiche tradizioni e patti misteriosi.
-\end{enfasi}
+% \begin{enfasi}
+% La strega è una praticante di magia che vive ai margini della società. La sua conoscenza deriva da antiche tradizioni e patti misteriosi.
+% \end{enfasi}
 
 
-\begin{enfasi}
-Un guerriero è più della sua spada. Un ladro è più di un grimaldello. Un kit è un insieme di abilità, equipaggiamento e ruolo nel mondo che definisce ulteriormente un personaggio, donandogli un sapore unico e nuove capacità, plasmando un eroe o un antieroe memorabile.
-\end{enfasi}
+% \begin{enfasi}
+% Un guerriero è più della sua spada. Un ladro è più di un grimaldello. Un kit è un insieme di abilità, equipaggiamento e ruolo nel mondo che definisce ulteriormente un personaggio, donandogli un sapore unico e nuove capacità, plasmando un eroe o un antieroe memorabile.
+% \end{enfasi}
 
 
 \end{multicols}
@@ -8379,16 +8376,6 @@ Se hai successo nella tua prova, il personaggio che stai aiutando ottiene un bon
 
 \end{multicols}
 
-\vfill
-
-\begin{center}
-
-\includegraphics[keepaspectratio,width=0.45\linewidth]{immagini/dungeon_small6.png}
-
-
-\end{center}
-
-
 \pagebreak
 
 \chapter{Specializzazione nelle Armi}\label{Specializzazione nelle Armi}\hypertarget{Specializzazione nelle Armi}{}\label{chap:spec-armi}
@@ -8465,7 +8452,7 @@ Non tutti i gradi sono accessibili a tutte le classi come indicato nelle note so
 
 Con il \textbf{primo slot} il personaggio diventa \textbf{Familiare} ovvero può usare l'arma senza penalità aggiuntive. Questo grado è accessibile a tutte le classi e rappresenta la capacità di sapere usare un'arma. Non ottiene bonus o capacità particolari.
 
-Con il \textbf{secondo slot}: Sacerdoti e Maghi diventano \textbf{Abili} (+1 al Tiro per Colpire); tutti gli altri diventano \textbf{Specializzati} e effettuano attacchi a round come un Combattente (non specializzato) di pari livello (vedi tabella \hyperlink{rateodiattacco}{Attacchi in mischia del Guerriero}, pag. \pageref{rateodiattacco}).
+Con il \textbf{secondo slot}: Sacerdoti e Maghi diventano \textbf{Abili} (+1 al Tiro per Colpire); tutti gli altri diventano \textbf{Specializzati} e attaccano con la cadenza della Tabella \ref{tab:rof_specialists}, superiore a quella del Combattente non specializzato di pari livello.
 
 Con il \textbf{terzo slot} si diventa \textbf{Maestri}. Questo è il grado massimo che un Templare o Magus può ottenere.
 
@@ -8509,7 +8496,7 @@ Spendendo il secondo slot (se non si è Maghi o Sacerdoti) di competenza nella s
 \item \textbf{Attacchi extra:} Vedi tabella \ref{tab:rof_specialists}
 \end{itemize}
 
-\textbf{Esempio}: \textit{Jawar, guerriero di 8$^\circ$ livello, è specializzato nella spada lunga. Quando combatte con la sua arma preferita, ha +1 al Tiro per Colpire e +2 ai danni. Può attaccare 3 volte ogni 2 round (1$^\circ$ round 2 attacchi, 2$^\circ$ round 1 attacco, e così via).}
+\textbf{Esempio}: \textit{Jawar, guerriero di 8$^\circ$ livello, è specializzato nella spada lunga. Quando combatte con la sua arma preferita, ha +1 al Tiro per Colpire e +2 ai danni. Nella fascia 7$^\circ$-12$^\circ$ la Tabella \ref{tab:rof_specialists} gli concede 2/1: può attaccare 2 volte per round.}
 
 \subsubsection{Specializzazione in Armi a Distanza}
 
@@ -8614,12 +8601,12 @@ Il Gran Maestro guadagna \textbf{+1 attacco aggiuntivo per round}, cumulativo co
 \paragraph{Calcolo degli Attacchi Totali}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 
-\item \textbf{7$^\circ$-12$^\circ$ livello:} 3/2 (livello) +1 (Gran Maestria) = 5/2 attacchi per round
-\item \textbf{13$^\circ$ livello e oltre:} 2 (livello) +1 (Gran Maestria) = 3 attacchi per round
+\item \textbf{7$^\circ$-12$^\circ$ livello:} 2/1 (cadenza da specialista, Tabella \ref{tab:rof_specialists}) +1 (Gran Maestria) = 3 attacchi per round
+\item \textbf{13$^\circ$ livello e oltre:} 5/2 (cadenza da specialista, Tabella \ref{tab:rof_specialists}) +1 (Gran Maestria) = 7/2 attacchi per round (4 nel 1$^\circ$ round, 3 nel 2$^\circ$ round, alternando)
 \end{itemize}
 
 \paragraph{Esempio}
-\textit{Thorin, ora Gran Maestro di 12$^\circ$ livello con la spada lunga, attacca con una furia controllata. Normalmente un guerriero di 12$^\circ$ livello ha 3/2 attacchi, se specialista ha 5/2 attacchi a round. Come Gran Maestro, Thorin ha 5/2 attacchi (perché è ovviamente specialista con la spada lunga) +1 quindi ha 7/2 attacchi: 4 attacchi nel primo round, 3 nel secondo round, alternando continuamente. Ogni attacco ha +3 al colpire e beneficia del danno aumentato (vedi sotto).}
+\textit{Thorin, ora Gran Maestro di 12$^\circ$ livello con la spada lunga, attacca con una furia controllata. Normalmente un guerriero di 12$^\circ$ livello ha 3/2 attacchi; se specialista ne ha 2/1 (Tabella \ref{tab:rof_specialists}). Come Gran Maestro, Thorin somma 1 attacco per round alla cadenza da specialista: 2/1 +1 = 3 attacchi per round. Ogni attacco ha +3 al colpire e beneficia del danno aumentato (vedi sotto).}
 
 \paragraph{Danno Aumentato}
 Il dado base di danno dell'arma aumenta di una taglia contro \textbf{tutti} gli avversari. La progressione è:
@@ -8821,15 +8808,17 @@ Questa specializzazione si articola in due livelli di maestria, ognuno dei quali
 \subsubsection*{Combattimento con Arma e Scudo}\hypertarget{sec:arma-e-scudo}{}
 \index{Combattimento!con Scudo}
 
-\begin{enfasi}
-La spada è la voce del guerriero, ma lo scudo è il suo cuore. Protegge ciò che è vitale e, al momento giusto, può colpire con la forza di un maglio.
-\end{enfasi}
 
 Lo stile di combattimento con arma e scudo è l'archetipo del combattente da prima linea: un baluardo di difesa in grado di resistere agli assalti nemici mentre protegge i suoi compagni.
 
 \subsubsection*{Regole base del Combattimento con Arma e Scudo}\hypertarget{ssec:stile-scudo}{}
 \index{Specializzazione nelle Armi!Stile Arma e Scudo}
 Questa specializzazione si articola in due livelli, ciascuno dei quali richiede l'investimento di uno slot di competenza nelle armi.
+
+
+\begin{enfasi}
+La spada è la voce del guerriero, ma lo scudo è il suo cuore. Protegge ciò che è vitale e, al momento giusto, può colpire con la forza di un maglio.
+\end{enfasi}
 
 \begin{description}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0cm]
 \item[Competenza (1 slot):]\index{Specializzazione nelle Armi!Stile Arma e Scudo!Competenza} Il personaggio impara a usare attivamente lo scudo per intercettare i colpi. Ottiene i seguenti benefici:
@@ -8847,6 +8836,9 @@ Questa specializzazione si articola in due livelli, ciascuno dei quali richiede 
 \end{description}
 
 
+\begin{giocatore}[Il Guardiano del Gruppo]
+Questo stile è la scelta perfetta per il \emph{tank} del gruppo. La tua sopravvivenza è massimizzata e, con la Maestria, diventi un protettore attivo per i tuoi compagni. Il Colpo di Scudo non infligge molti danni, ma è ottimo per finire un nemico indebolito senza sprecare l'attacco della tua arma principale, o per tentare di sbilanciare un avversario. La tua posizione sul campo di battaglia è fondamentale: piazzati tra i nemici e i tuoi alleati più fragili.
+\end{giocatore}
 
 
 \captionof{table}{Riepilogo Benefici dello Stile Arma e Scudo}\label{tab:benefici-scudo}\hypertarget{tab:benefici-scudo}{}
@@ -8867,9 +8859,6 @@ Questa specializzazione si articola in due livelli, ciascuno dei quali richiede 
 \end{tabularx}
 
 
-\begin{giocatore}[Il Guardiano del Gruppo]
-Questo stile è la scelta perfetta per il \emph{tank} del gruppo. La tua sopravvivenza è massimizzata e, con la Maestria, diventi un protettore attivo per i tuoi compagni. Il Colpo di Scudo non infligge molti danni, ma è ottimo per finire un nemico indebolito senza sprecare l'attacco della tua arma principale, o per tentare di sbilanciare un avversario. La tua posizione sul campo di battaglia è fondamentale: piazzati tra i nemici e i tuoi alleati più fragili.
-\end{giocatore}
 
 \subsubsection*{Combattimento con Arma a Distanza}\hypertarget{sec:arma-a-distanza}{}
 \index{Combattimento!a Distanza}
@@ -8939,7 +8928,7 @@ Questa specializzazione si articola in due livelli, ciascuno dei quali richiede 
 
 \begin{center}
 
-\includegraphics[keepaspectratio,width=\linewidth]{immagini/dungeon4.png}
+\includegraphics[keepaspectratio,width=0.8\linewidth]{immagini/dungeon4.png}
 
 \end{center}
 
@@ -9168,7 +9157,8 @@ Le seguenti liste includono gran parte dell'equipaggiamento di cui il tuo person
 
 
 \captionof{table}{Equipaggiamento Vario}\label{tab:equip-vario}\hypertarget{tab:equip-vario}{}
-\noindent\begin{tabularx}{\linewidth}{Xcr}
+\noindent
+\begin{multicoltab}{X c r}
 \toprule
 \rowcolor{gray!20}\textbf{Oggetto} & \textbf{Peso} & \textbf{Costo} \\
 \rowcolor{gray!20}&\textbf{(kg)}&\textbf{(ma)}\\
@@ -9199,8 +9189,6 @@ Catena (al mt) - Pesante\index[Equipaggiamento]{Catena (al mt) - Pesante} & 1,5 
 \rowcolor{gray!20}Ceralacca/cera per candele (al kg)\index[Equipaggiamento]{Ceralacca/cera per candele (al kg)} & 1 & 20 \\
 Cerata\index[Equipaggiamento]{Cerata} & 1 & 1\\
 \rowcolor{gray!20}Cesto - Grande\index[Equipaggiamento]{Cesto - Grande} & 0,5 & 3 \\
-\end{tabularx}
-\noindent\begin{tabularx}{\linewidth}{Xcr}
 Cesto - Piccolo\index[Equipaggiamento]{Cesto - Piccolo} & - & 0,5 \\
 \rowcolor{gray!20}Chiodo da roccia\index[Equipaggiamento]{Chiodo da roccia} & - & 0,3 \\
 Cintura porta oggetti\index[Equipaggiamento]{Cintura porta oggetti} & 1 & 20\\
@@ -9208,15 +9196,6 @@ Cintura porta oggetti\index[Equipaggiamento]{Cintura porta oggetti} & 1 & 20\\
 Coperta\index[Equipaggiamento]{Coperta} & 1,5 & 5 \\
 \rowcolor{gray!20}Corda (18m) - Canapa\index[Equipaggiamento]{Corda} & 5 & 10 \\
 Corda (18m) - Seta\index[Equipaggiamento]{Corda Seta} & 2,5 & 100 \\
-\bottomrule
-\end{tabularx}
-
-\captionof{table}{Equipaggiamento Vario.. continua}\label{tab:equip-vario2}\hypertarget{tab:equip-vario2}{}
-\noindent\begin{tabularx}{\linewidth}{Xcr}
-\toprule
-\rowcolor{gray!20}\textbf{Oggetto} & \textbf{Peso} & \textbf{Costo} \\
-\rowcolor{gray!20}&\textbf{(kg)}&\textbf{(ma)}\\
-\midrule
 Cote\index[Equipaggiamento]{Cote} & 0,5 & 0,2 \\
 \rowcolor{gray!20}Custodia per mappe o pergamene\index[Equipaggiamento]{Custodia per mappe o pergamene} & - & 8 \\
 Custodia per quadrelli\index[Equipaggiamento]{Custodia per quadrelli} & 0,5 & 10 \\
@@ -9255,11 +9234,13 @@ Torcia\index[Equipaggiamento]{Torcia} & 0,5 & 0,1 \\
 \rowcolor{gray!20}Uncino\index[Equipaggiamento]{Uncino} & 1,5 & 2 \\
 Zaino\index[Equipaggiamento]{Zaino} & 1 & 20\\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 \captionof{table}{Servizi}\label{tab:servizi}\hypertarget{tab:servizi}{}
-\noindent\begin{tabularx}{\linewidth}{Xr}
+%\noindent\begin{tabularx}{\linewidth}{Xr}
+\begin{multicoltab}{X r}
+
 \toprule
 \rowcolor{gray!20}\textbf{Servizio}\index{Servizi} & \textbf{Costo} \\
 \rowcolor{gray!20}& \textbf{(ma) }\\
@@ -9275,14 +9256,14 @@ Menestrello (a esibizione)\index[Equipaggiamento]{Menestrello (a esibizione)} & 
 Portatore di lanterna o torcia (a notte)\index[Equipaggiamento]{Portatore di lanterna o torcia (a notte)} & 1 \\
 \rowcolor{gray!20}Scrivano (per lettera)\index[Equipaggiamento]{Scrivano (per lettera)} & 2 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 \subsection{Altre Liste di Equipaggiamento}\label{altre-liste-equip}
 
 
 \subsubsection*{Abbigliamento}\hypertarget{ssec:abbigliamento}{}\index[Equipaggiamento]{Abbigliamento}
 \captionof{table}{Abbigliamento}\label{tab:servizi-abbigliamento}\hypertarget{tab:servizi-abbigliamento}{}
-\noindent\begin{tabularx}{\linewidth}{Xrr}
+\begin{multicoltab}{X r r}
 \toprule
 \rowcolor{gray!20}\textbf{Oggetto} & \textbf{Peso} & \textbf{Costo} \\
 \rowcolor{gray!20}& \textbf{(kg)} & \textbf{(ma)} \\
@@ -9317,14 +9298,15 @@ Toga, grezza\index[Equipaggiamento]{Toga, grezza} & 1 & 0,8 \\
 \rowcolor{gray!20}Tunica\index[Equipaggiamento]{Tunica} & 1 & 8 \\
 Veste, comune\index[Equipaggiamento]{Veste, comune} & 1,5 & 12 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 
 
 \subsubsection*{Cibo e Alloggio}\hypertarget{ssec:cibo-alloggio}{}\index[Equipaggiamento]{Cibo e Alloggio}
 \captionof{table}{Cibo e Alloggio}\label{tab:cibo e alloggio}\hypertarget{tab:cibo e alloggio}{}
-\noindent\begin{tabularx}{\linewidth}{Xr}
+%\noindent\begin{tabularx}{\linewidth}{Xr}
+    \begin{multicoltab}{X r}
 \toprule
 \rowcolor{gray!20}\textbf{Oggetto} & \textbf{Costo} \\
 \rowcolor{gray!20}&\textbf{(ma)}\\
@@ -9346,13 +9328,15 @@ Uovo o verdure fresche\index[Equipaggiamento]{Uovo o verdure fresche} & 0,1 \\
 \rowcolor{gray!20}Vino comune (brocca)\index[Equipaggiamento]{Vino comune (brocca)} & 2 \\
 Zuppa\index[Equipaggiamento]{Zuppa} & 0,5 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 
 \subsubsection*{Provviste Domestiche}\hypertarget{ssec:provviste}{}\index[Equipaggiamento]{Provviste}
 \captionof{table}{Provviste domestiche}\label{tab:servizi-provviste}\hypertarget{tab:servizi-provviste}{}
-\noindent\begin{tabularx}{\linewidth}{Xrr}
+%\noindent\begin{tabularx}{\linewidth}{Xrr}
+        \begin{multicoltab}{X r r}
+
 \toprule
 \rowcolor{gray!20}\textbf{Oggetto} & \textbf{Peso} & \textbf{Costo} \\
 \rowcolor{gray!20}& \textbf{(kg)} & \textbf{(ma)} \\
@@ -9376,12 +9360,13 @@ Spezie - Rare\index[Equipaggiamento]{Spezie - Rare} & 1 & 40 \\
 %Uva passa\index[Equipaggiamento]{%Uva passa} & 1 & 4 \\
 Zucchero grezzo\index[Equipaggiamento]{Zucchero grezzo} & 1 & 20 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 \subsubsection*{Finimenti e Bardature}\hypertarget{ssec:finimenti}{}\index[Equipaggiamento]{Finimenti}
 \captionof{table}{Finimenti e Bardature}\label{tab:finimenti e armature}\hypertarget{tab:finimenti e armature}{}
-\noindent\begin{tabularx}{\linewidth}{Xrr}
+%\noindent\begin{tabularx}{\linewidth}{Xrr}
+\begin{multicoltab}{X r r}
 \toprule
 \rowcolor{gray!20}\textbf{Oggetto} & \textbf{Peso} & \textbf{Costo} \\
 \rowcolor{gray!20}& \textbf{(kg)} & (\textbf{ma)} \\
@@ -9397,7 +9382,7 @@ Finimenti per carro\index[Equipaggiamento]{Finimenti per carro} & 18 & 20 \\
 \rowcolor{gray!20}Morso e briglie\index[Equipaggiamento]{Morso e briglie} & 1,5 & 1,5 \\
 Sella\index[Equipaggiamento]{Sella} & 15 & 100 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 %\begin{giocatore}[Non Dimenticare le Razioni!]
@@ -9411,7 +9396,9 @@ Sella\index[Equipaggiamento]{Sella} & 15 & 100 \\
 
 \subsubsection*{Trasporti}\hypertarget{ssec:trasporti}{}\index[Equipaggiamento]{Trasporti}
 \captionof{table}{Trasporti}\label{tab:trasporti}\hypertarget{tab:trasporti}{}
-\noindent\begin{tabularx}{\linewidth}{Xrr}
+%\noindent\begin{tabularx}{\linewidth}{Xrr}
+    \begin{multicoltab}{X r r}
+
 \toprule
 \rowcolor{gray!20}\textbf{Oggetto} & \textbf{Peso} & \textbf{Costo} \\
 \rowcolor{gray!20}& & \textbf{(mo)} \\
@@ -9436,7 +9423,7 @@ Nave lunga\index[Equipaggiamento]{Nave lunga} & -- & 10000 \\
 %Vela\index[Equipaggiamento]{Vela} & 10 kg & 20 \\
 Zattera o piccola chiglia\index[Equipaggiamento]{Zattera o piccola chiglia} & 100 kg & 100 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 
 
 \end{multicols}
@@ -9447,7 +9434,9 @@ Zattera o piccola chiglia\index[Equipaggiamento]{Zattera o piccola chiglia} & 10
 
 
 \captionof{table}{Animali, Carico e Movimento}\label{tab:animali}\hypertarget{tab:animali}{}
-\begin{xltabular}{\linewidth}{Xccccr}
+%\begin{xltabular}{\linewidth}{Xccccr}
+        \begin{multicoltab}{Xccccc}
+
 \toprule
 %\textbf{Animale} & \textbf{Mov} & \textbf{x1} & \textbf{x1/2} & \textbf{x1/3} & \textbf{Costo} \\
 \rowcolor{gray!20}\textbf{Animale} & \textbf{Movimento} & \multicolumn{3}{c}{\textbf{Movimento}} & \textbf{Costo}\\
@@ -9489,7 +9478,7 @@ Pony\index[Equipaggiamento]{Pony} & 12 & 160 & 240 & 320 & 30 \\
 Uccello canterino\index[Equipaggiamento]{Uccello canterino} & -- & -- & -- & -- & 1 \\
 \rowcolor{gray!20}Vitello\index[Equipaggiamento]{Vitello} & -- & -- & -- & -- & 5 \\
 \bottomrule
-\end{xltabular}
+\end{multicoltab}
 
 
 
@@ -9901,7 +9890,8 @@ Loto Nero (estratto)\index{Loto Nero (estratto)}& I& 1 r& 0& Morte. TS superato:
 \textbf{Tabella: Pozioni Naturali}\index{Pozioni Naturali}\label{tab:pozioni}
 
 
-\noindent\begin{xltabular}{\linewidth}{lllXc}
+%\noindent\begin{xltabular}{\linewidth}{lllXc}
+    \begin{multicoltab}{lllXc}
 \toprule
 \textbf{Nome}& \textbf{Uso} & \textbf{Ins.} & \textbf{Effetto}& \textbf{Costo} \\
 \rowcolor{gray!20}&&&&\textbf{(mo)}\\
@@ -9952,7 +9942,7 @@ Uscaboo & R& 1 T &  Rimuove cecità& 575 \\
 \rowcolor{gray!20}Wickalim & I& 1 ora& Cura 2 Punti Ferita&  25 \\
 Yajeth & I& 1 T&  Cura 2d8 Punti Ferita&  500 \\
 \bottomrule
-\end{xltabular}
+\end{multicoltab}
 
 \begin{multicols}{2}
 
@@ -10847,7 +10837,7 @@ Stalliere & 2 \\
 \captionof{table}{Costi Mensili dei Mercenari}\label{tab:costi_mercenari}\hypertarget{tab:costi_mercenari}{}
 \index{Tabella Costi dei Mercenari}
 
-\noindent\begin{tabularx}{\linewidth}{XXX}
+\noindent\begin{tabularx}{\linewidth}{lXl}
 \toprule
 \rowcolor{gray!20}\textbf{Tipo di Truppa} & \textbf{Equipaggiamento Tipico} & \textbf{Costo Mensile (mo)} \\
 \midrule
@@ -13762,7 +13752,7 @@ Armatura: A piastre (tutti i tipi) & -50\% \\
 Armatura: Cuoio borchiato, imbottita & -5\% \\
 \rowcolor{gray!20}Razza: Mezzi giganti & +10\% \\
 Razza: Nano & -10\% \\
-\rowcolor{gray!20}Razza: Nani, Gnomi o Halfling & -15\% \\
+\rowcolor{gray!20}Razza: Gnomi o Halfling & -15\% \\
 %Ingombro\index{Ingombro!e Scalata} & -5\% \\
 Superficie: Leggermente scivolosa (bagnata o friabile) & -25\% \\
 \rowcolor{gray!20}Superficie: Scivolosa (ghiacciata, viscida) & -40\% \\
@@ -14580,13 +14570,6 @@ Ricorda che anche la fine di un incontro può essere l'inizio di uno nuovo: il r
 
 \end{multicols}
 
-\vfill
-
-\begin{center}
-\includegraphics[keepaspectratio,width=\linewidth]{immagini/dungeon_small11.png}
-\end{center}
-
-
 \pagebreak
 
 \chapter{La Magia}\label{chap:cap11}\index{Magia}
@@ -14615,14 +14598,14 @@ Sia i maghi che i sacerdoti usano le stesse regole per lanciare incantesimi. In 
 
 Queste magie sono quelle che vengono definite \emph{memorizzate}. Per lanciare un incantesimo, il personaggio deve prima averlo quindi memorizzato. Se non è memorizzato, non può essere lanciato. L'incantatore deve essere in grado di parlare e avere almeno una mano libera. Se l'incantesimo è mirato a una persona, un luogo o una cosa, l'incantatore deve essere in grado di vedere il bersaglio.
 
-\begin{regola}[Interruzione del Lancio]
-Un incantesimo viene interrotto e cancellato dalla memoria finché non viene rimemorizzato se, nel round in cui viene lanciato, l'incantatore:
-\begin{itemize}[topsep=2pt, itemsep=1pt, parsep=0pt, leftmargin=*]
-\item subisce qualsiasi danno fisico o magico, oppure
-\item fallisce un Tiro Salvezza contro un effetto avversario.
-\end{itemize}
-L'incantesimo è perduto nell'effervescenza dell'energia non canalizzata.
-\end{regola}
+%\begin{regola}[Interruzione del Lancio]
+%Un incantesimo viene interrotto e cancellato dalla memoria finché non viene rimemorizzato se, nel round in cui viene lanciato, l'incantatore:
+%\begin{itemize}[topsep=2pt, itemsep=1pt, parsep=0pt, leftmargin=*]
+%\item subisce qualsiasi danno fisico o magico, oppure
+%\item fallisce un Tiro Salvezza contro un effetto avversario.
+%\end{itemize}
+%L'incantesimo è perduto nell'effervescenza dell'energia non canalizzata.
+%\end{regola}
 
 Un incantatore può lanciare quante volte vuole al giorno gli incantesimi di \textbf{0 Livello} memorizzati.
 
@@ -14906,7 +14889,8 @@ La Sorgente Selvaggia è uno strumento narrativo potente. Non aver paura dei suo
 \end{narratore}
 
 \captionof{table}{Sorgente Selvaggia (Esempi)}\label{tab:flusso-selvaggio}\hypertarget{tab:flusso-selvaggio}{}
-\noindent\begin{tabularx}{\linewidth}{lX}
+\noindent
+\begin{multicoltab}{lX}
 \toprule
 \textbf{d100} & \textbf{Effetto della Sorgente Selvaggia} \\
 \rowcolor{gray!20}01-05 & Tira su questa tabella a ogni tuo round per il prossimo minuto. \\
@@ -14919,8 +14903,6 @@ La Sorgente Selvaggia è uno strumento narrativo potente. Non aver paura dei suo
 36-40 & La tua altezza cambia di 1d10 x 2,5 cm. Se il tiro è dispari, ti rimpicciolisci. Se è pari, cresci. \\
 \rowcolor{gray!20}41-45 & Recuperi il tuo slot incantesimo di livello più basso speso. \\
 46-50 & Per il prossimo minuto, ogni creatura entro 6 metri da te viene teletrasportata casualmente di 3 metri in una direzione casuale (tira 1d8) all'inizio del tuo turno. \\
-\end{tabularx}
-\noindent\begin{tabularx}{\linewidth}{lX}
 \rowcolor{gray!20}51-55 & L'incantesimo originale non ha effetto, ma tu recuperi lo slot incantesimo come se non l'avessi mai lanciato. \\
 56-60 & Diventi invisibile per 1d4 round, come per l'incantesimo \href{SADE-Incantesimi-vol1.pdf\#inc:"Invisibilità Migliorata"}{\emph{Invisibilità Migliorata}}. \\
 61-65 & Un unicorno\index{Unicorno} appare in uno spazio non occupato entro 1,5 metri da te, poi scompare dopo 1 minuto. \\
@@ -14932,7 +14914,7 @@ La Sorgente Selvaggia è uno strumento narrativo potente. Non aver paura dei suo
 91-95 & Recuperi 2d10 Punti Ferita. \\
 \rowcolor{gray!20}96-00 & Appari immediatamente in un luogo sicuro nel Piano Astrale. Alla fine del tuo prossimo turno, ritorni nello spazio che occupavi in precedenza. \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 {\flushleft{\footnotesize{Nota: Questa è una tabella di esempio. Il Game Master è incoraggiato a creare la propria tabella personalizzata con 100 effetti unici.}}}
 
 
@@ -15109,11 +15091,14 @@ Culto molto guerriero è diffuso presso gli alti ranghi guerriero-aristocratici.
 
 
 \subsubsection*{Solimi - La Luce}\index{Solimi}\hypertarget{solimi}{}\label{solimi}
+
+Chierici tranquilli e pacifici sanno pero' usare fuoco e fiamme per difendere i loro protetti.
+
 \begin{enfasi}
 I chierici della dea Solimi sono portatori di luce e verità, spesso fungono da oracoli. Sempre ben abbronzati, potrebbero fissare il sole tutto il tempo.
 Di morale positiva sono tra i chierici più diffusi.
 \end{enfasi}
-Chierici tranquilli e pacifici sanno pero' usare fuoco e fiamme per difendere i loro protetti.
+
 \paragraph{Dogmi di Solimi:}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item La luce è vita e conoscenza
@@ -19486,7 +19471,8 @@ La bacchetta delle meraviglie è un dispositivo strano e imprevedibile che gener
 
 \medskip
 
-\noindent\begin{tabularx}{\linewidth}{lX}
+\noindent
+\begin{multicoltab}{lX}
 \toprule
 \rowcolor{gray!20}\textbf{d100} & \textbf{Effetto} \\
 \midrule
@@ -19506,12 +19492,10 @@ La bacchetta delle meraviglie è un dispositivo strano e imprevedibile che gener
 \rowcolor{gray!20}70-79 & Palla di fuoco come bacchetta \\
 80-84 & L'invisibilità copre il portatore della bacchetta \\
 \rowcolor{gray!20}85-87 & Le foglie crescono dal bersaglio se entro 60 piedi (18 metri) dalla bacchetta \\
-\end{tabularx}
-\noindent\begin{tabularx}{\linewidth}{lX}
 88-90 & 10-40 gemme del valore base di 1 mo sparano in un flusso lungo 30 piedi, ognuna causando un punto di danno a qualsiasi creatura sul percorso -- tira 5d4 per il numero di colpi \\
 \rowcolor{gray!20}91-97 & Colori scintillanti danzano e giocano su un'area di 40 per 30 piedi (9 metri) davanti alla bacchetta le creature al suo interno accecate per 1d6 round \\
 98-00 & Carne in pietra (o il contrario se il bersaglio è pietra) se il bersaglio è entro 60 piedi (18 metri) \\
-\end{tabularx}
+\end{multicoltab}
 
 
 \medskip
@@ -24377,12 +24361,6 @@ Chi indossa questo zuccotto di lana quando riposa fa sempre sogni piacevoli. Nel
 
 \end{multicols}
 
-\vfill
-
-\begin{center}
-\includegraphics[keepaspectratio,width=\linewidth]{immagini/dungeon_small8.png}
-\end{center}
-
 \pagebreak
 
 \chapter{I Piani}\label{piani}\index{Piani}
@@ -24555,10 +24533,8 @@ La velocità di una creatura intralciata diventa 0, e non può beneficiare di al
 
 \end{description}
 
-
 \begin{narratore}[Usare le Condizioni]
-Le condizioni sono uno strumento potente per rendere gli incontri più vari e impegnativi senza dover necessariamente aumentare il danno dei mostri. Un gruppo di goblin che usa reti per intralciare i personaggi può essere più pericoloso di un singolo orco. Un nemico che usa un veleno debilitante può trasformare uno scontro in una corsa contro il tempo. Varia le sfide che proponi ai giocatori usando le condizioni in modo creativo.
-\end{narratore}
+Le condizioni sono uno strumento potente per rendere gli incontri più vari e impegnativi senza dover necessariamente aumentare il danno dei mostri. Un gruppo di goblin che usa reti per intralciare i personaggi può essere più pericoloso di un singolo orco. \end{narratore}
 
 \end{multicols}
 
@@ -25401,7 +25377,7 @@ Al 10$^\circ$ livello, un Ladro di successo può fondare una propria gilda o div
 
 
 \captionof{table}{Avanzamento del Ladro}\label{tab:exp-ladro-completa}\hypertarget{tab:exp-ladro-completa}{}
-\noindent\begin{tabularx}{\linewidth}{X c c c}
+\begin{multicoltab}{X c c c}
 \toprule
 \rowcolor{gray!20}\textbf{Livello} & \textbf{Punti Esperienza} & \textbf{Dadi Vita (d6)} & \textbf{THAC0} \\
 \midrule
@@ -25426,7 +25402,7 @@ Al 10$^\circ$ livello, un Ladro di successo può fondare una propria gilda o div
 19 & 1.980.000 & 10+18 & 11 \\
 \rowcolor{gray!20}20 & 2.200.000 & 10+20 & 11 \\
 \bottomrule
-\end{tabularx}
+\end{multicoltab}
 \textit{\footnotesize{Oltre il 20$^\circ$, +220.000 PE per livello. I PV aumentano di +2 per livello dopo il 10$^\circ$ (nessun bonus COS).}}
 
 \bigskip
@@ -25559,8 +25535,6 @@ Sentire Rumori & 20\% \\
 
 \end{multicols}
 
-\pagebreak
-
 \captionof{table}{Avanzamento Completo del Bardo}\label{tab:bardo-unificata}\hypertarget{tab:bardo-unificata}{}
 \noindent\begin{tabularx}{\linewidth}{X XXXXXXXXXc}
 \toprule
@@ -25602,7 +25576,7 @@ Sentire Rumori & 20\% \\
 \vfill
 
 \begin{center}
-\includegraphics[keepaspectratio,width=\linewidth]{immagini/dungeon8.png}
+\includegraphics[keepaspectratio,width=0.7\linewidth]{immagini/dungeon8.png}
 \end{center}
 
 \pagebreak
