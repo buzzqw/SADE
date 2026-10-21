@@ -661,6 +661,20 @@ after skip=\baselineskip,
 % INDICI CONTINUI - Senza interruzioni di pagina
 % ═══════════════════════════════════════════════════════════════════
 
+\newcommand{\indexheading}[1]{%
+  \par\vspace{8pt}%
+  \needspace{3\baselineskip}%
+  \noindent\begin{minipage}{\linewidth}%
+    \raggedright%
+    {\color{tsrblue}\fontbarra\Large\bfseries #1\par}%
+    \vspace{2pt}%
+    {\color{tsrblue}\rule{\linewidth}{1.2pt}}%
+  \end{minipage}%
+  \par\vspace{4pt}%
+}
+
+\indexsetup{level=\indexheading, firstpagestyle=fancy}
+
 \newenvironment{continuousindices}{%
 \let\cleardoublepage\relax
 \let\clearpage\relax
@@ -868,7 +882,7 @@ persevera fino a renderli reali.}
 La più grande delle avventure non si vive su una mappa, ma nell'immaginazione, attorno a un tavolo, tra amici pronti a sfidare l'impossibile armati solo di matite, dadi e coraggio.
 \end{enfasi}
 
-Il profumo della pizza aleggiava nella stanza, mescolandosi all'odore quasi sacro di manuali stampati e matite temperate. Sul tavolo, davanti ad una caotica massa di dadi poliedrici e schede del personaggio, troneggiava lo schermo di Marco, il Game Master, custode dei segreti del mondo di SADE.
+Il profumo della pizza aleggiava nella stanza, mescolandosi all'odore quasi sacro di manuali stampati e matite temperate. Sul tavolo, davanti a una caotica massa di dadi poliedrici e schede del personaggio, troneggiava lo schermo di Marco, il Game Master, custode dei segreti del mondo di SADE.
 
 
 \begin{multicols}{2}
@@ -931,7 +945,7 @@ Il colpo va a segno. <<Ottimo! A livello 5, i miei danni sono triplicati!>> escl
 
 \textbf{Giulia (Elara):} Mi avvicino con cautela al sarcofago, tenendo le dita pronte a lanciare un incantesimo. <<Prima che qualcuno tocchi qualcosa, voglio capire con cosa abbiamo a che fare. Lancio \href{SADE-Incantesimi-vol1.pdf\#inc:"Individuazione del Magico"}{Individuazione del Magico}.>>
 
-\textbf{Marco (GM):} Mentre pronunci le parole, la stanza si tinge ai tuoi occhi di un velo iridescente. Percepisci chiaramente due auree distinte provenire dal sarcofago. Una è di necromanzia l'altra di abiurazione.
+\textbf{Marco (GM):} Mentre pronunci le parole, la stanza si tinge ai tuoi occhi di un velo iridescente. Percepisci chiaramente due aure distinte provenire dal sarcofago. Una è di necromanzia l'altra di abiurazione.
 
 \textbf{Sara (Lyra):} <<Magia protettiva? Sembra una trappola magica.>> Lyra si avvicina al sarcofago dal lato opposto, studiando le giunture del pesante coperchio di pietra. <<Mentre Elara si concentra sulla magia, io cerco trappole meccaniche. Non si sa mai.>>
 
@@ -1014,7 +1028,7 @@ Il mondo è davvero pieno di pericoli, e vi sono molti luoghi oscuri; ma si trov
 
 Le pagine che stai per leggere sono un portale. Non descrivono semplicemente un gioco ma un universo di possibilità infinite, dove antiche rovine attendono di essere scoperte, draghi sputafuoco sorvegliano tesori incalcolabili e il destino di interi regni può dipendere dal coraggio di un piccolo gruppo di eroi. Questo è un Gioco di Ruolo Fantasy, un'esperienza collaborativa dove tu e i tuoi amici, guidati dal Game Master, racconterete insieme una saga epica.
 
-SADE ti fornirà le regole per dare vita al tuo eroe e per navigare le sfide di questo mondo, ma il cuore del gioco è la tua immaginazione. Chi sarai? Un nano temprato dalle fucine della sua montagna? Un esule elfo ? O un umano ambizioso, pronto a tutto pur di plasmare il proprio destino?
+SADE ti fornirà le regole per dare vita al tuo eroe e per navigare le sfide di questo mondo, ma il cuore del gioco è la tua immaginazione. Chi sarai? Un nano temprato dalle fucine della sua montagna? Un esule elfo? O un umano ambizioso, pronto a tutto pur di plasmare il proprio destino?
 
 Prepara i dadi, \emph{affila} la matita e preparati. L'avventura ti attende.
 
@@ -1026,7 +1040,7 @@ Concorda quale regole mantenere: i \hyperlink{chaptalenti}{Talenti} (pag. \pager
 
 \subsection{Uno Sguardo al Passato, un Piede nel Futuro}\label{prefazione}
 
-\textbf{SADE}\index{SADE} (\textit{Second ADvanced Edition}) è un progetto nato dalla nostalgia e passione per un'epoca d'oro del gioco di ruolo. Il suo scopo è catturare lo spirito e la profondità tattica della Seconda Edizione, Avanzata, del più famoso gioco di ruolo fantasy, levigandone dove necessario le asperità e avvicinandolo ad uno stile di gioco più moderno e fluido.
+\textbf{SADE}\index{SADE} (\textit{Second ADvanced Edition}) è un progetto nato dalla nostalgia e passione per un'epoca d'oro del gioco di ruolo. Il suo scopo è catturare lo spirito e la profondità tattica della Seconda Edizione, Avanzata, del più famoso gioco di ruolo fantasy, levigandone dove necessario le asperità e avvicinandolo a uno stile di gioco più moderno e fluido.
 
 Non si tratta di una semplice riproposizione, ma di una molto rispettosa evoluzione. Le regole che troverai qui sono state pensate per preservare il più possibile del regolamento originale, introducendo al contempo meccaniche che migliorano la qualità di gioco e offrono maggiore personalizzazione, rendendo l'esperienza più accessibile sia per i veterani che per i nuovi avventurieri.
 
@@ -1323,6 +1337,8 @@ Razze con penalità alla Forza non possono tirare per la forza eccezionale anche
 25 & +2 (+7) & 100\% & 100\% & +4 & 1 PF/1 turno & 4 \\
 \bottomrule
 \end{tabularx}
+
+\textbf{Mod. PF}: il valore tra parentesi è riservato ai Combattenti.
 \normalsize
 
 \begin{multicols}{2}
@@ -1828,7 +1844,7 @@ Se non vuoi usare il pacchetto standard di una sottorazza, costruisci qui il tuo
 \item \textbf{Determinare stabilità (5):}\index{Nano!Abilità!Determinare stabilità} Può determinare (1-4 su 1d6) se ci sarà un crollo o una frana.
 \item \textbf{Esperto negoziatore (5):}\index{Nano!Abilità!Esperto negoziatore} Acquista oggetti al 10\% in meno del prezzo di listino.
 \item \textbf{Fondersi nella pietra (15):}\index{Nano!Abilità!Fondersi nella pietra} Una volta al giorno, può usare \href{SADE-Incantesimi-vol1.pdf\#inc:"Fondersi nella Pietra"}{\emph{Fondersi nella Pietra}}.
-\item \textbf{Furtività (10):}\index{Nano!Abilità!Furtività} Senza armatura di metallo da una penalità di 2 ai tiri sorpresa dell'avversario ed un bonus di 2 ai propri.
+\item \textbf{Furtività (10):}\index{Nano!Abilità!Furtività} Senza armatura di metallo dà una penalità di 2 ai tiri sorpresa dell'avversario ed un bonus di 2 ai propri.
 \item \textbf{Infravisione (10):}\index{Infravisione} Infravisione fino a 20m.
 \item \textbf{Parlare con le pietre (10):}\index{Nano!Abilità!Parlare con le pietre} Una volta al giorno, può usare \href{SADE-Incantesimi-vol1.pdf\#inc:"Parlare con la Pietra"}{Parlare con la Pietra}.
 \item \textbf{Pelle densa (10):}\index{Nano!Abilità!Pelle densa} Riduce il danno da armi contundenti di 3 (minimo 1).
@@ -2005,7 +2021,7 @@ Se non vuoi usare il pacchetto standard di una sottorazza, costruisci qui il tuo
 \item \textbf{Bonus con la lancia (5):} \index{Elfo!Abilità!Bonus con la lancia} +1 per colpire con una lancia.
 \item \textbf{Bonus con la spada (5):} \index{Elfo!Abilità!Bonus con la spada} +1 ai Tiri per Colpire con spada corta o lunga.
 \item \textbf{Compagno (10):} \index{Elfo!Abilità!Compagno} Ottiene la compagnia di un tipico animale domestico elfico.
-\item \textbf{Furtività (10):} \index{Elfo!Abilità!Furtività} Da solo e senza armatura di metallo da una penalità di 4 alla sorpresa dell'avversario.
+\item \textbf{Furtività (10):} \index{Elfo!Abilità!Furtività} Da solo e senza armatura di metallo dà una penalità di 4 alla sorpresa dell'avversario.
 \item \textbf{Identificazione magica (10):} \index{Elfo!Abilità!Identificazione magica} Ha una probabilità (INT x 3\%) di identificare un oggetti magico. La prova sul singolo oggetto può essere fatta una volta al giorno.
 \item \textbf{Infravisione (10):} \index{Infravisione} Raggio di infravisione di 20m.
 \item \textbf{Meno sonno (5):} \index{Elfo!Abilità!Meno sonno} Richiede solo quattro ore di sonno per essere riposato.
@@ -2041,7 +2057,7 @@ I Golian svettano sulla maggior parte delle altre razze, con un'altezza che vari
 
 
 \begin{giocatore}[Golian]
-Interpretare un personaggio così grande offre spunti unici. Potresti avere difficoltà a muoverti in stretti dungeon o ad entrare in locande costruite per gli halfling. Usa la tua stazza a tuo vantaggio: per intimidire, per proteggere i tuoi compagni più piccoli o per compiere imprese di forza che nessun altro potrebbe tentare.
+Interpretare un personaggio così grande offre spunti unici. Potresti avere difficoltà a muoverti in stretti dungeon o a entrare in locande costruite per gli halfling. Usa la tua stazza a tuo vantaggio: per intimidire, per proteggere i tuoi compagni più piccoli o per compiere imprese di forza che nessun altro potrebbe tentare.
 \end{giocatore}
 
 
@@ -2249,7 +2265,7 @@ Se non vuoi usare il pacchetto standard di una sottorazza, costruisci qui il tuo
 \noindent\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
 \item \textbf{Amicizia animale (10):} \index{Gnomo!Abilità!Amicizia animale} Una volta al giorno, \href{SADE-Incantesimi-vol1.pdf\#inc:"Amicizia con gli Animali"}{\emph{Amicizia con gli animali}} per animali che scavano.
 \item \textbf{Bonus ai Tiri Salvezza (5):} \index{Gnomo!Abilità!Bonus ai Tiri Salvezza} Bonus ai TS contro magia basato sulla Costituzione (vedi \hyperlink{tab:ts-bonus-razziale}{Tabella Bonus TS Razziale} nella sezione Nani).
-\item \textbf{Bonus al Combattimento (10):} \index{Gnomo!Abilità!Bonus al Combattimento} Bonus di 1 per colpire kobold e goblin. Gnoll, bugbear, orchi, troll e giganti subiscono penalità di 4 per colpire gli gnomi.
+\item \textbf{Bonus al Combattimento (10):} \index{Gnomo!Abilità!Bonus al Combattimento} Bonus di 1 per colpire coboldi e goblin. Gnoll, bugbear, orchi, troll e giganti subiscono penalità di 4 per colpire gli gnomi.
 \item \textbf{Bonus con i dardi (5):} \index{Gnomo!Abilità!Bonus con i dardi} +1 per colpire con i dardi.
 \item \textbf{Bonus con il pugnale (5):} \index{Gnomo!Abilità!Bonus con il pugnale} +1 per colpire con i pugnali.
 \item \textbf{Bonus con la fionda (5):} \index{Gnomo!Abilità!Bonus con la fionda} +1 per colpire con una fionda.
@@ -2418,7 +2434,7 @@ Piedipelosi & -1 & +1 & --- & --- & --- & --- \\
 
 Gli umani si ergono tipicamente da 1,6 a poco più di 1,8 m di altezza. Grazie alla loro propensione per la migrazione e la conquista, alla loro breve durata di vita, sono fisicamente più diversi delle altre razze. Molti umani hanno un pizzico di sangue non umano. Raggiungono l'età adulta intorno ai 15 anni e raramente vivono un secolo.\index{Umano!Età}
 
-I personaggi umani possono aggiungere +1 ad una qualsiasi statistica a loro scelta; nel caso della Forza, consultare il paragrafo sulla Forza Eccezionale (pagina \pageref{forza-eccezionale}) per risultati superiori a 18. Lo stesso vale per i Mezzi giganti.
+I personaggi umani possono aggiungere +1 a una qualsiasi statistica a loro scelta; nel caso della Forza, consultare il paragrafo sulla Forza Eccezionale (pagina \pageref{forza-eccezionale}) per risultati superiori a 18. Lo stesso vale per i Mezzi giganti.
 
 Gli umani possono avanzare senza limiti in tutte le classi (vedi Tabella \hyperlink{tab:limiti-livello}{Limiti di Livello Razziali Complessivi}); questa è un'abilità standard e non costa punti personaggio.
 
@@ -2427,7 +2443,7 @@ Per personalizzare ulteriormente il tuo umano, hai \textbf{10 PP} da spendere ne
 \subsubsection*{Abilità Umane}\hypertarget{abilita:umane}{}\index{Umano!Abilità}
 \noindent\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
 \item \textbf{Bonus d'attacco (5):} \index{Umano!Abilità!Bonus d'attacco} +1 per attaccare con un'arma a scelta.
-\item \textbf{Bonus di esperienza (10):} \index{Umano!Abilità!Bonus di esperienza} +5\% di bonus ai punti esperienza guadagnati. \textit{(PHB 2e prevede +10\% per requisito primario 16+; SADE riduce il bonus al 5\% perché acquistato con PP anziché automatico.})
+\item \textbf{Bonus di esperienza (10):} \index{Umano!Abilità!Bonus di esperienza} +5\% di bonus ai punti esperienza guadagnati (questo bonus è cumulabile con l'eventuale +5\% per requisito primario 16+).
 \item \textbf{Bonus Punti Ferita (10):} \index{Umano!Abilità!Bonus Punti Ferita} Un PF aggiuntivo ad ogni nuovo livello.
 \item \textbf{Individuare porte segrete (10):} \index{Umano!Abilità!Individuare porte segrete} Un umano con una traccia di sangue elfico può avere l'abilità degli elfi di individuare porte.
 \item \textbf{Pelle robusta (10):} \index{Umano!Abilità!Pelle robusta} CA naturale di 8. Se indossa un'armatura migliore, non ha effetto. Se indossa un'armatura peggiore di 8, ottiene +1 alla sua CA.
@@ -2847,7 +2863,7 @@ Porti con te la disciplina ferrea della tua gente, ma per qualche motivo hai las
 \item \textbf{CA Naturale:} 10
 \item \textbf{Movimento:} 9m
 \item \textbf{Infravisione:} Fino a 18 metri.
-\item \textbf{Abilità Minerarie:} Come i nani, possono rilevare nuove costruzioni (40\%), passaggi inclinati (40\%) e muri mobili (40\%) .
+\item \textbf{Abilità Minerarie:} Come i nani, possono rilevare nuove costruzioni (40\%), passaggi inclinati (40\%) e muri mobili (40\%).
 \end{itemize}
 
 \sottorazza{Mutato}
@@ -3016,7 +3032,7 @@ Sei un predatore alieno in un mondo strano. La tua mente funziona in modo divers
 \sottorazza{Donna Cigno}
 
 Le Donne Cigno sono femmine umane dotate del potere magico di trasformarsi in cigni. In forma umana, sono indistinguibili dalle altre persone, sebbene siano spesso donne di notevole bellezza e grazia. In forma di cigno, sono grandi uccelli bianchi di straordinaria bellezza. Tutte portano un gettone magico di qualche tipo (un anello, un mantello o una cintura, per esempio) che permette loro di cambiare forma.
-Alcune Donne Cigno in realtà si trasformano in altre tipologia di uccelli, ma sempre maestosi ed affascinanti.
+Alcune Donne Cigno in realtà si trasformano in altre tipologie di uccelli, ma sempre maestosi e affascinanti.
 
 
 \begin{enfasi}
@@ -3119,7 +3135,7 @@ Come un centauro, sei un combattente formidabile in campo aperto, ma impacciato 
 \item \textbf{Bonus Punti Ferita:} +5 PF al 1$^\circ$ livello.
 \item \textbf{Attacchi Naturali:} 2 artigli (1d4). Può attaccare con un'arma e con gli artigli nello stesso round.
 \item \textbf{Nascondersi in Ambienti Naturali:} Abilità di nascondersi in praterie o savane con una probabilità di successo del 50\%
-\item \textbf{Taglia Grande:} Può usare armi a due mani ad una \emph{zampa} sola. Subisce danni come una creatura di taglia Grande.
+\item \textbf{Taglia Grande:} Può usare armi a due mani a una \emph{zampa} sola. Subisce danni come una creatura di taglia Grande.
 \item \textbf{Forma Inumana:} Non può indossare armature o stivali magici progettati per umanoidi.
 \end{itemize}
 
@@ -3129,6 +3145,12 @@ Come un centauro, sei un combattente formidabile in campo aperto, ma impacciato 
 
 
 \vfill
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{immagini/dungeon17.png}
+\end{center}
+
+\medskip
 
 \begin{center}
 \includegraphics[keepaspectratio,width=0.9\linewidth]{immagini/dungeon_small12.png}
@@ -3235,6 +3257,8 @@ Le classi dei Combattenti includono il guerriero, il barbaro, il paladino e il r
 \bottomrule
 \end{tabularx}
 
+\textbf{DV}: il Barbaro ha il D12 come dado vita.
+
 
 \captionof{table}{Titoli di Livello delle Classi Combattenti}\label{tab:titoli-guerrieri}\hypertarget{tab:titoli-guerrieri}{}
 \index{Guerriero!Titoli di Livello}\index{Ranger!Titoli di Livello}\index{Paladino!Titoli di Livello}\index{Barbaro!Titoli di Livello}
@@ -3318,7 +3342,7 @@ Tutti i membri del gruppo dei Combattenti:
 \bottomrule
 \end{tabularx}
 
-\textit{*3/2 round significa: 2 attacchi nel primo round, 1 attacco nel secondo round, poi si ripete.}
+\textit{*3/2 round significa: 1 attacco nel primo round, 2 attacchi nel secondo round, poi si ripete.}
 
 \medskip
 
@@ -3493,7 +3517,7 @@ Tutti i paladini hanno le seguenti restrizioni:
 \item Non possono possedere più di 10 oggetti magici.
 \item Non possono mai accumulare ricchezza personale; il denaro in eccesso deve essere donato a cause meritevoli.
 \item Non tollereranno la compagnia di coloro che sanno essere malvagi.
-\item Non possono attrarre un corpo di seguaci come un guerriero, sebbene possano avere scudieri\index{Scudieri (Henchmen)}.
+\item Non attraggono un corpo di seguaci militari comuni come un guerriero, sebbene possano avere scudieri\index{Scudieri (Henchmen)} e seguaci votati alla fede (pag. \pageref{ssec:tipi_seguaci}).
 \item Possono usare qualsiasi tipo di elmo.
 \end{itemize}
 
@@ -3624,7 +3648,7 @@ I ranger ricevono \textbf{60 punti personaggio (PP)}\index{Punti Personaggio!Ran
 \item \textbf{Bonus difensivo (10):} Ottiene un bonus di +2 alla Classe Armatura se non indossa armatura e ha ingombro nullo.
 \item \textbf{Competenza in Seguire Tracce (5):} \index{Ranger!Abilità!Seguire Tracce} Ottiene la competenza in Seguire Tracce, che migliora di +1 ogni tre livelli.
 \item \textbf{Empatia con gli Animali (10):} \index{Ranger!Abilità!Empatia con gli Animali} Può farsi amico animali non ostili. Contro animali selvatici, l'animale deve superare un TS contro incantesimi.
-\item \textbf{Incantesimi da Chierico (10):} \index{Ranger!Abilità!Incantesimi} Al 7$^\circ$ livello, può lanciare incantesimi dalle sfere delle piante\index{Sfere (Sacerdote)!Piante} e degli animali\index{Sfere (Sacerdote)!Animale}.
+\item \textbf{Incantesimi da Chierico (10):} \index{Ranger!Abilità!Incantesimi} All'8$^\circ$ livello, può lanciare incantesimi dalle sfere delle piante\index{Sfere (Sacerdote)!Piante} e degli animali\index{Sfere (Sacerdote)!Animale}.
 \item \textbf{Maestria del Tiratore (10):} \index{Ranger!Abilità!Maestria del Tiratore} Può subire una penalità di 1 per colpire per un bonus di 1 al danno, o +1 per colpire per -1 al danno con armi a distanza. Il modificatore aumenta a 2 al 6$^\circ$ liv. e a 3 all'11$^\circ$ liv. Non può scegliere anche Maestria della Lama.
 \item \textbf{Maestria della Lama (10):} \index{Ranger!Abilità!Maestria della Lama} Ottiene competenza e maestria nello Stile di Combattimento a Due Armi\index{Combattimento!a Due Armi}. Non può scegliere anche Maestria del Tiratore.
 \item \textbf{Muoversi Silenziosamente (5):} \index{Ranger!Abilità!Muoversi Silenziosamente} Come l'abilità del ladro, ma solo con armature leggere (vedi Tabella \ref{tab:abilita-ranger}).
@@ -3667,7 +3691,7 @@ Può viaggiare con massimo 4 compagni. Oltre questo numero, subisce penalità di
 È stato maledetto da una creatura potente. Opzioni: (a) tutti gli animali entro 30 metri percepiscono la sua presenza (impossibile sorprendere creature naturali), (b) una volta al mese è costretto a cacciare ossessivamente per 1d3 giorni (non può resistere), (c) le sue ferite guariscono a metà velocità normale.
 
 \item \textbf{Odio Irrazionale (5):} \index{Ranger!Restrizioni!Odio Irrazionale}
-L'odio per i nemici razziali è così forte che deve effettuare un TS contro Incantesimi per non attaccare immediatamente quando ne vede uno, anche se tatticalmente insensato. In combattimento affronta prima i nemici razziali.
+L'odio per i nemici razziali è così forte che deve effettuare un TS contro Incantesimi per non attaccare immediatamente quando ne vede uno, anche se tatticamente insensato. In combattimento affronta prima i nemici razziali.
 
 \item \textbf{Intolleranza Razziale (3):} \index{Ranger!Restrizioni!Intolleranza}
 Oltre ai normali nemici razziali, ha forte pregiudizio contro una razza demihumana specifica (elfi, nani, halfling, ecc.). Penalità di 4 alle reazioni. Deve effettuare TS contro Incantesimi per cooperare efficacemente in situazioni critiche.
@@ -3734,7 +3758,7 @@ I maghi comandano energie sbalorditive e sono avversari pericolosi. Il potere di
 
 Tutti i maghi hanno la capacità di lanciare numerosi incantesimi offensivi, difensivi e informativi. Tutti i maghi iniziano il gioco con tre incantesimi di livello 0 e tre incantesimi di 1$^\circ$ livello nel loro libro degli incantesimi\index{Libro degli Incantesimi}. I maghi specialisti possono aggiungere un incantesimo di 1$^\circ$ livello della loro scuola di specializzazione.
 
-I maghi non multi-classe ottengono incantesimi bonus in base alla loro Intelligenza (vedi Tabella \hyperlink{tab:mod-intelligenza}{Modificatori dell'Intelligenza}). Infine, i maghi possono preparare un numero di trucchetti (incantesimi di livello 0) ogni giorno pari al numero di linguaggi bonus conosciuti, questi incantesimi non si esauriscono quando vengono lanciati.\footnote{\textbf{Nota SADE:} Nel PHB 2e classico i trucchetti si esauriscono come incantesimi normali. SADE adotta la variante ``a volontà'' per rendere il gioco più fluido.}
+I maghi non multi-classe ottengono incantesimi bonus in base alla loro Intelligenza (vedi Tabella \hyperlink{tab:mod-intelligenza}{Modificatori dell'Intelligenza}). Infine, i maghi possono preparare un numero di trucchetti (incantesimi di livello 0) ogni giorno pari al numero di linguaggi bonus conosciuti (minimo 1), questi incantesimi non si esauriscono quando vengono lanciati.\footnote{\textbf{Nota SADE:} Nel PHB 2e classico i trucchetti si esauriscono come incantesimi normali. SADE adotta la variante ``a volontà'' per rendere il gioco più fluido.}
 
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item \textbf{Requisiti di Caratteristica:}\index{Mago!Requisiti} Intelligenza 9
@@ -3983,7 +4007,7 @@ A differenza dei maghi, gli stregoni \textbf{non usano un libro degli incantesim
 
 Gli stregoni possono dimenticare ad ogni passaggio di livello, un incantesimo conosciuto per sostituirlo con un altro, di pari livello.
 
-Lo Stregone base non ha accesso ad alcuna scuola di magia e quindi non può lanciare incantesimi arcani, solo scegliento l'abilità \textbf{Sangue Magico (10 PP)} per ottenere accesso a una scuola e poter funzionare come incantatore arcano.
+Lo Stregone base non ha accesso ad alcuna scuola di magia e quindi non può lanciare incantesimi arcani, solo scegliendo l'abilità \textbf{Sangue Magico (10 PP)} per ottenere accesso a una scuola e poter funzionare come incantatore arcano.
 
 
 Gli stregoni hanno \textbf{65 punti personaggio (PP)}\index{Punti Personaggio!Stregone} da spendere in abilità.
@@ -3997,7 +4021,7 @@ Gli stregoni hanno \textbf{65 punti personaggio (PP)}\index{Punti Personaggio!St
 
 \item \textbf{Magia Innata:}\index{Stregone!Magia Innata} Questa è l'abilità fondamentale dello stregone. Non usa un libro degli incantesimi. Conosce un numero fisso di incantesimi (vedi Tabella \hyperlink{tab:incantesimi-conosciuti-stregone}{Incantesimi Conosciuti dallo Stregone}) e può lanciarli utilizzando gli slot disponibili (vedi Tabella \hyperlink{tab:incantesimi-stregone}{Incantesimi che può lanciare lo Stregone}). Il Carisma è la sua caratteristica da incantatore dal quale capire modificatori, bonus e penalità (al pari di intelligenza per i maghi).
 
-\item \textbf{Sangue magico (10):}\index{Stregone!Abilità!Sangue magico} Lo stregone ha accesso ad una scuola di magia e può apprendere incantesimi da quella scuola.
+\item \textbf{Sangue magico (10):}\index{Stregone!Abilità!Sangue magico} Lo stregone ha accesso a una scuola di magia e può apprendere incantesimi da quella scuola.
 
 \item \textbf{Bonus Punti Ferita (10):}\index{Stregone!Abilità!Bonus Punti Ferita} Lo stregone tira 1d6 per i PF invece di 1d4.
 
@@ -4083,7 +4107,7 @@ Gli stregoni hanno \textbf{65 punti personaggio (PP)}\index{Punti Personaggio!St
 \end{tabularx}
 
 \begin{enfasi}
-La magia è una eredità di potenze antiche che scorre nelle tue vene e risponde al richiamo della tua volontà. Si te stesso fino all'ultima goccia di sangue!
+La magia è una eredità di potenze antiche che scorre nelle tue vene e risponde al richiamo della tua volontà. Sii te stesso fino all'ultima goccia di sangue!
 \end{enfasi}
 
 
@@ -4164,15 +4188,15 @@ Stai attento! non hai i Punti Ferita di un Guerriero né la versatilità di un M
 \noindent\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
 
 
-\item \textbf{Apprendista Guerriero (vari):}\index{Magus!Abilità!Apprendista Guerriero} Il Magus può scegliere una delle abilità del Combattente ma la paga il doppio dei PP richiesti ad un Combattente.
-\item \textbf{Apprendista Mago (vari):}\index{Magus!Abilità!Apprendista Mago} Il Magus può scegliere una delle abilità del Mago ma la paga il doppio dei PP richiesti ad un Mago.
+\item \textbf{Apprendista Guerriero (vari):}\index{Magus!Abilità!Apprendista Guerriero} Il Magus può scegliere una delle abilità del Combattente ma la paga il doppio dei PP richiesti a un Combattente.
+\item \textbf{Apprendista Mago (vari):}\index{Magus!Abilità!Apprendista Mago} Il Magus può scegliere una delle abilità del Mago ma la paga il doppio dei PP richiesti a un Mago.
 \item \textbf{Specializzazione in un'arma (10):} \index{Magus!Abilità!Specializzazione in un'arma}\index{Specializzazione nelle Armi} Può specializzarsi in un'arma.
 \item \textbf{Colpo Incantato (15):}\index{Magus!Abilità!Colpo Incantato} Questa è l'abilità distintiva del Magus. Quando effettua un attacco in mischia, può scegliere di sacrificare un incantesimo memorizzato (come azione gratuita) per infondere la sua arma di energia. L'attacco infligge \textbf{+1d8 danni aggiuntivi per ogni livello dell'incantesimo sacrificato}. Ad esempio, sacrificando un incantesimo di 3$^\circ$ livello, l'attacco infligge +3d8 danni. L'incantesimo deve avere un tempo di lancio inferiore al round. Se l'attacco non va a segno l'incantesimo è perso.
 \item \textbf{Arma Conduttiva (30):}\index{Magus!Abilità!Arma Conduttiva} Devi aver preso anche \emph{Colpi Incantati}. Il Magus usa la sua arma quale mezzo per consegnare l'incantesimo che lancia, l'Area di Effetto dell'incantesimo si origina dal colpo portato dall'arma.
-\item \textbf{Incantesimi a distanza (15):} \index{Magus!Abilità!Incantesimi con portata} Il Magus può usare un'arma a distanza (archi, balestre..) per fare in modo che il proiettile consegni l'incantesimo. È richiesta Arma Conduttia.
+\item \textbf{Incantesimi a distanza (15):} \index{Magus!Abilità!Incantesimi con portata} Il Magus può usare un'arma a distanza (archi, balestre..) per fare in modo che il proiettile consegni l'incantesimo. È richiesta Arma Conduttiva.
 \item \textbf{Conoscenza Arcana (5):}\index{Magus!Abilità!Conoscenza Arcana} Il Magus ottiene un bonus di +1 a tutte le prove di competenza di \hyperlink{sapienza-magica}{Sapienza Magica}.
 \item \textbf{Incantesimi da Mago (5):}\index{Magus!Abilità!Incantesimi} Il Magus lancia incantesimi arcani come un Mago, utilizzando un libro degli incantesimi. La sua progressione è più lenta (vedi Tabella \hyperlink{tab:incantesimi-magus}{Progressione Incantesimi del Magus}). Ogni volta che prende questa abilità può imparare incantesimi da una Scuola di magia diversa. Senza questa abilità il Magus non può lanciare incantesimi.
-\item \textbf{Incantesimo da Combattimento (10):}\index{Magus!Abilità!Incantesimo da Combattimento} Il Magus è addestrato a lanciare incantesimi nel fervore della battaglia. Se subisce danni mentre lancia un incantesimo, può effettuare un Tiro Salvezza contro Paralisi con un +3 per non perdere l'incantesimo.
+\item \textbf{Incantesimo da Combattimento (10):}\index{Magus!Abilità!Incantesimo da Combattimento} Il Magus è addestrato a lanciare incantesimi nel fervore della battaglia. Se subisce danni mentre lancia un incantesimo, può effettuare un Tiro Salvezza contro Paralisi con un +3 per non perdere l'incantesimo. Solo per il Magus questa abilità è cumulabile con l'Abilità Concentrazione.
 \item \textbf{Legame con l'Arma (5):}\index{Magus!Abilità!Legame con l'Arma} Il Magus crea un legame mistico con una specifica arma a sua scelta. Come azione gratuita, può evocare istantaneamente l'arma nella sua mano, purché si trovi sullo stesso piano di esistenza. Al 5$^\circ$ livello, quest'arma è considerata magica (+1) al solo fine di colpire creature immuni alle armi normali.
 \end{itemize}
 
@@ -4204,7 +4228,7 @@ La fede non è credere che il tuo dio farà la tua volontà, ma credere che tu f
 \item \textbf{Armi:} solo contundenti e quella della divinità
 \end{itemize}
 
-Un sacerdote è un seguace e un sostenitore di una particolare divinità, che agisce in modo appropriato ad essa e usa i suoi poteri per promuovere le credenze della sua religione.
+Un sacerdote è un seguace e un sostenitore di una particolare divinità, che agisce in modo appropriato a essa e usa i suoi poteri per promuovere le credenze della sua religione.
 
 Tutti i personaggi sacerdoti possono lanciare incantesimi concessi loro dalla loro divinità, indossare molti tipi di armature e usare molte armi.
 
@@ -4289,7 +4313,7 @@ Fantasma o 10 DV\index{Scacciare Non-Morti!Fantasma} & -- & -- & -- & -- & -- & 
 Speciali\index{Scacciare Non-Morti!Speciali} & -- & -- & -- & -- & -- & -- & -- & -- & 20 & 19 & 16 & 13 \\
 \bottomrule
 \end{xltabular}
-{\flushleft{\footnotesize{Un numero indica il risultato necessario su 2d10 per scacciare. \textbf{T} = Scaccia automaticamente; \textbf{D} = Distrugge; \textbf{D*} = Distrugge 2d4 creature addizionali di questo tipo. Un trattino (--) indica che lo scacciare fallisce automaticamente. Lo Scacciare i non morti agisce raggio di 27 metri.}\\
+{\flushleft{\footnotesize{Un numero indica il risultato necessario su 1d20 per scacciare. \textbf{T} = Scaccia automaticamente; \textbf{D} = Distrugge; \textbf{D*} = Distrugge 2d4 creature addizionali di questo tipo. Un trattino (--) indica che lo scacciare fallisce automaticamente. Lo Scacciare i non morti agisce in un raggio di 27 metri.}\\
 † I Paladini scacciano i non-morti come sacerdoti di due livelli inferiori.
 Le creature speciali includono non-morti unici, non-morti con libero arbitrio del Piano dell'Energia Negativa, certi Poteri Maggiori e Inferiori, e quei non-morti che dimorano nei Piani Esterni.}}
 
@@ -4324,10 +4348,9 @@ Le creature speciali includono non-morti unici, non-morti con libero arbitrio de
 
 I chierici sono il tipo più comune di sacerdote e sono generalmente di allineamento buono. Sono soldati robusti al servizio della loro divinità. Possono indossare armature fino alla maglia di stecche e portare uno scudo, ma sono limitati all'uso di sole armi contundenti\index{Armi!Contundenti}.
 
-
 Normalmente, un chierico spende punti personaggio per ottenere accesso completo alle sfere di tutto, astrale, charme, combattimento, creazione, necromantica, divinazione, guardiana, guarigione, protezione, evocazione e sole, così come accesso parziale alla sfera elementale.
 
-I Chierici possono preparare un numero di trucchetti (incantesimi di livello 0) ogni giorno pari al numero di linguaggi bonus conosciuti, questi incantesimi non si esauriscono quando vengono lanciati (variante SADE).
+I Chierici possono preparare un numero di trucchetti (incantesimi di livello 0) ogni giorno pari al numero di linguaggi bonus conosciuti (minimo 1), questi incantesimi non si esauriscono quando vengono lanciati (variante SADE).
 
 Un chierico riceve \textbf{120 punti personaggio (PP)}\index{Punti Personaggio!Chierico} da spendere in abilità.
 
@@ -4423,7 +4446,7 @@ Un Chierico di Culti specifici riceve \textbf{55 punti personaggio (PP)}\index{P
 
 \subsubsection*{Abilità del Chierico di Culti specifici}\hypertarget{abilita:chierico-fede}{}\index{Chierico!di Culti specifici!Abilità}
 \noindent\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
-\item \textbf{Accesso alle sfere:} \index{Chierico!di Culti specifici!Accesso alle sfere} Ottiene pieno accesso alle sfere indicate dalla sua divintà nella Tabella \hyperlink{divinita-sfere}{Prerequisiti e Sfere di Influenza per Tipo di Divinità} ma può spendere punti per ottenere accesso parziale ad altre sfere come il Chierico generico.
+\item \textbf{Accesso alle sfere:} \index{Chierico!di Culti specifici!Accesso alle sfere} Ottiene pieno accesso alle sfere indicate dalla sua divinità nella Tabella \hyperlink{divinita-sfere}{Prerequisiti e Sfere di Influenza per Tipo di Divinità} ma può spendere punti per ottenere accesso parziale ad altre sfere come il Chierico generico.
 \item \textbf{Aumento durata incantesimi (10):} \index{Sacerdote!Abilità!Aumento durata incantesimi} Durata aumentata di 1 round ogni due livelli.
 \item \textbf{Bonus Punti Ferita (10):} \index{Sacerdote!Abilità!Bonus Punti Ferita} Usa 1d10 per i PF invece di 1d8.
 \item \textbf{Guaritore esperto (5):} \index{Sacerdote!Abilità!Guaritore esperto} Può lanciare un incantesimo \href{SADE-Incantesimi-vol1.pdf\#inc:"Cura Ferite Leggere"}{\emph{Cura Ferite Leggere}} aggiuntivo al giorno.
@@ -4672,7 +4695,7 @@ Come Druido, sei il custode dell'equilibrio naturale. Il tuo potere non deriva d
 
 \textbf{Armi ed Armature}\index{Druido!Restrizioni!Armi e Armature}\\
 
-Un Druido può usare le armi che assomigliano ad attrezzi usati nella pastorizia e nell'agricoltura o che possono rappresentare aspetti del loro credo come la luna crescente, la vita, la morte ed il ciclo naturale.
+Un Druido può usare le armi che assomigliano ad attrezzi usati nella pastorizia e nell'agricoltura o che possono rappresentare aspetti del loro credo come la luna crescente, la vita, la morte e il ciclo naturale.
 
 Un druido può usare solo le seguenti armi: falcetto, dardo, lancia, pugnale, scimitarra, fionda, kopesh e bastone. Eventuali altre armi sono a discrezione del Game Master a seconda della campagna.
 
@@ -4692,7 +4715,7 @@ Poteri aggiuntivi vengono concessi man mano che il druido raggiunge livelli supe
 
 Al \textbf{3$^\circ$ livello} può identificare piante, animali e acqua pura con perfetta accuratezza. Può attraversare aree ricoperte di vegetazione intricata (densi cespugli spinosi, rampicanti aggrovigliati, macchie di rovi, ecc.) senza lasciare traccia e alla sua normale velocità di movimento. Può apprendere i linguaggi delle creature boschive. Questi includono centauri, driadi, elfi, fauni, gnomi, draghi, giganti, uomini lucertola, manticore, nixie, pixie, sprite e treant. Il druido può aggiungere un linguaggio al 3$^\circ$ livello e uno in più ogni volta che avanza di un livello oltre il 3$^\circ$. Non impara in automatico il linguaggio ma gli è permesso spendere slot di competenza su questi linguaggi.
 
-Al \textbf{terzo livello può trasformarsi} in un mammifero, dal 5 livello in un Uccello, dal 7 livello in un rettile, al 13 livello in un elementale. La tabella \hyperlink{tab:trasformazione-druido}{Usi della Trasformazione per Giorno} dettaglia il numero di volte in cui il Druido può trasformarsi ed in che tipo.
+Al \textbf{terzo livello può trasformarsi} in un mammifero, dal 5 livello in un Uccello, dal 7 livello in un rettile, al 13 livello in un elementale. La tabella \hyperlink{tab:trasformazione-druido}{Usi della Trasformazione per Giorno} dettaglia il numero di volte in cui il Druido può trasformarsi e in che tipo.
 
 La taglia può variare da quella di una raganella o piccolo uccello fino a grande quanto un orso nero. Assumendo una nuova forma, il druido guarisce dal 10 al 60\% (1d6 $\times$ 10\%) di tutti i danni subiti (arrotondare le frazioni per difetto). Il druido può assumere solo la forma di un animale normale (del mondo reale) nelle sue proporzioni normali, ma così facendo assume tutte le caratteristiche di quella creatura (la sua velocità di movimento e abilità, la sua Classe Armatura, numero di attacchi e danno per attacco). Al 13$^\circ$ livello acquisisce la capacità di trasformarsi in un Elementale.
 
@@ -4761,7 +4784,7 @@ Cambiare forma richiede un round, durante il quale il druido non può compiere a
 Il druido può rimanere nella nuova forma indefinitamente: la durata della forma termina quando il druido ritorna alla forma originale o ne assume un'altra. Un druido può trasformarsi da una forma all'altra senza prima ritornare alla forma umana.
 Dopo aver assunto una nuova forma, il druido guarisce dal 10\% al 60\% (1d6*10) di tutti i danni. Ad esempio, un druido che ha subito 15 punti di danno tira un 5 su un d6. Pertanto, il personaggio riacquista il 50\% di -15 PF, ovvero 7,5 PF che si arrotonda a 7 PF recuperati.
 
-La forma animale assunta da un druido può variare dalle dimensioni di una rana o di un piccolo uccello a quello di un orso nero. Se non diversamente specificato, il druido può assumere solo la forma di a animale normale (del mondo reale) in proporzioni normali. Un druido in forma animale assume tutto caratteristiche fisiche della bestia, velocità di movimento, abilità, Classe Armatura (CA), numero di attacchi e danni per attacco. Il druido conserva i Punti Ferita ed i tiri salvezza propri.
+La forma animale assunta da un druido può variare dalle dimensioni di una rana o di un piccolo uccello a quello di un orso nero. Se non diversamente specificato, il druido può assumere solo la forma di un animale normale (del mondo reale) in proporzioni normali. Un druido in forma animale assume tutte le caratteristiche fisiche della bestia, velocità di movimento, abilità, Classe Armatura (CA), numero di attacchi e danni per attacco. Il druido conserva i Punti Ferita e i tiri salvezza propri.
 
 Anche gli abiti del druido e un oggetto tenuto in ciascuna mano diventano parte del nuovo corpo; questi riappaiono quando il druido riprende la forma normale. Generalmente, un druido in forma animale non può utilizzare tali oggetti, ma in campagne particolarmente impegnative il GM può consentire che oggetti di protezione, come un anello di protezione, di funzionare normalmente. Un druido mutato irradia una forte magia di Alterazione.
 
@@ -4813,7 +4836,7 @@ M: Mammiferi, U: Uccelli, R: Rettili, E: Elementale
 
 \textbf{Compagno Animale}\\
 
-Un druido che acquisisce l'abilità del compagno animale sceglie un animale dall'elenco \ref{stat:compagni-animali}. A seconda del livello del Druido questo migliora nella resistenza, difesa ed attacco.
+Un druido che acquisisce l'abilità del compagno animale sceglie un animale dall'elenco \ref{stat:compagni-animali}. A seconda del livello del Druido questo migliora nella resistenza, difesa e attacco.
 
 Il compagno è un esemplare superiore della sua specie e migliora con il livello del druido secondo la Tabella Compagni Animali.
 Il druido ha un legame empatico con il compagno e può impartirgli comandi mentali fino a 1,5 km di distanza. Se il compagno muore, il druido deve superare un Tiro Salvezza contro Morte o perdere 1 punto di Costituzione permanente.
@@ -4947,12 +4970,12 @@ I monaci possono impiegare qualsiasi arma contundente, ma solitamente prediligon
 
 I monaci non possono portare armature ma guadagnano bonus alla Classe Armatura come indicato nella tabella \ref{tabellamonaci}.
 
-I monaci non possono usare oggetti magici che simulano armature, come i \textit{bracciali di difesa}, ma possono indossare ad esempio mantelli o anelli fino ad un totale massimo di 6 oggetti magici. Per il resto, possono usare qualsiasi oggetto magico normalmente utilizzabile dai sacerdoti.\\
+I monaci non possono usare oggetti magici che simulano armature, come i \textit{bracciali di difesa}, ma possono indossare ad esempio mantelli o anelli fino a un totale massimo di 6 oggetti magici. Per il resto, possono usare qualsiasi oggetto magico normalmente utilizzabile dai sacerdoti.\\
 
 
 \textbf{Roccaforti e Seguaci}
 
-I monaci non guadagnano mai seguaci, ma al \textbf{9$^\circ$ livello} un monaco può ricevere il permesso di stabilire un monastero come avamposto del loro ordine; se lo fa, da 10 a 40 monaci di livello inferiore verranno al loro monastero e intraprenderanno i loro studi lì, riconoscendo il monaco PG come capo della loro dojo.\\
+I monaci non guadagnano mai seguaci, ma al \textbf{9$^\circ$ livello} un monaco può ricevere il permesso di stabilire un monastero come avamposto del loro ordine; se lo fa, da 10 a 40 monaci di livello inferiore verranno al loro monastero e intraprenderanno i loro studi lì, riconoscendo il monaco PG come capo del loro dojo.\\
 
 \textbf{Competenze non militari}
 
@@ -5003,7 +5026,7 @@ Ogni quattro livelli dopo il 1$^\circ$ (5$^\circ$, 9$^\circ$, 13$^\circ$, 17$^\c
 
 \medskip
 
-Questi Bonus al Tiro per Colpire ed al Danno si applicano ai danni causati con le armi naturali.\\
+Questi Bonus al Tiro per Colpire e al Danno si applicano ai danni causati con le armi naturali.\\
 
 
 \textbf{Abilità da Ladro}
@@ -5252,7 +5275,7 @@ Lo psionico è un individuo che sfrutta la forza della propria mente per influen
 
 Gli psionici non sono limitati nell'uso di armature o armi ma l'uso di armature metalliche può interferire con la loro concentrazione. Tirano 1d6 per i loro Punti Ferita\index{Punti Ferita (PF)!Psionico} dal 1$^\circ$ al 10$^\circ$ livello. Successivamente, guadagnano 2 Punti Ferita per livello.
 
-Tutti gli psionici possiedono Punti Forza Psionica (PSP, \emph{Psionic Strenght Points})\index{Punti Forza Psionica (PSP)}, che rappresentano la loro riserva di energia mentale. Questa riserva aumenta con il livello e con i punteggi di Saggezza, come dettagliato nella Tabella \ref{tab:psp-psionico}. I PSP vengono spesi per attivare i poteri psionici.
+Tutti gli psionici possiedono Punti Forza Psionica (PSP, \emph{Psionic Strength Points})\index{Punti Forza Psionica (PSP)}, che rappresentano la loro riserva di energia mentale. Questa riserva aumenta con il livello e con i punteggi di Saggezza, come dettagliato nella Tabella \ref{tab:psp-psionico}. I PSP vengono spesi per attivare i poteri psionici.
 
 \end{multicols}
 
@@ -5739,7 +5762,7 @@ I bardi hanno \textbf{70 punti personaggio (PP)}\index{Punti Personaggio!Bardo} 
 \noindent\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
 \item \textbf{Amicizia Animale (10):} Una volta al giorno, può usare questa abilità come l'incantesimo \emph{Amicizia Animale}, cantando una canzone rasserenante.
 \item \textbf{Bonus difensivo (10)}: Concede un bonus di +2 alla Classe Armatura se non indossa alcun tipo di armatura e se non è ingombrato
-\item \textbf{Contrastare Effetti (10):} \index{Bardo!Abilità!Contrastare Effetti} Può contrastare attacchi magici basati su canti e musiche con un controcanto, rendendo immuni tutti i personaggi entro 9m. Defe effettuare una prova di Strumento Musicale con una penalità pari al livello dell'incantesimo che vuole contrastare. Può solo muoversi di metà movimento.
+\item \textbf{Contrastare Effetti (10):} \index{Bardo!Abilità!Contrastare Effetti} Può contrastare attacchi magici basati su canti e musiche con un controcanto, rendendo immuni tutti i personaggi entro 9m. Deve effettuare una prova di Strumento Musicale con una penalità pari al livello dell'incantesimo che vuole contrastare. Può solo muoversi di metà movimento.
 \item \textbf{Dilettante in Magia (10):} \index{Bardo!Abilità!Dilettante in Magia} Apprende la magia come da tabella \hyperlink{tab:incantesimi-bardo}{Progressione Incantesimi e Uso Pergamene del Bardo}. Inizia con 1d4 incantesimi tra Trucchetti e primo livello nel suo libro, scelti da qualsiasi scuola di magia dei maghi o dalla sfera di guarigione dei chierici.
 \item \textbf{Incitare gli Amici (10):} \index{Bardo!Abilità!Incitare gli Amici} Con un'azione di round (un numero di volte al giorno pari a liv/2), può concedere a un alleato: +1 per colpire e +1 ai TS oppure +2 al Morale oppure +2 a una prova di abilità per 1d4 round.
 \item \textbf{Gran Finale (10):} \index{Bardo!Abilità!Gran Finale} Può terminare un effetto attivo di \textit{Incitare gli Amici} per uno dei seguenti finali: \textit{Eroico} (gli alleati ottengono 1d4 PF temp. ogni 2 livelli), \textit{Mortale} (i nemici subiscono 1d4 danni sonori ogni 2 livelli), \textit{Purificatore} (un alleato può ritirare un TS fallito).
@@ -5759,7 +5782,7 @@ I bardi hanno \textbf{70 punti personaggio (PP)}\index{Punti Personaggio!Bardo} 
 \item \textbf{Trovare/Rimuovere Trappole* (10 PP):} Consente al Bardo di ispezionare un'area o un oggetto alla ricerca di trappole meccaniche o allarmi semplici. Se una trappola viene individuata, può tentare di disarmarla.
 \item \textbf{Tuttofare (5):} \index{Bardo!Abilità!Tuttofare} Può usare l'azione Aiutare un Altro anche se non ha la competenza.
 \item \textbf{Uso delle Pergamene (10):} \index{Bardo!Abilità!Uso delle Pergamene} Può usare pergamene di incantesimi magici (vedi Tabella \hyperlink{tab:incantesimi-bardo}{Progressione Incantesimi e Uso Pergamene del Bardo}).
-\item \textbf{Uso oggetti magici (10):} \index{Bardo!Abilità!Uso oggetti magici} Oltre agli oggetti da Canaglio o Bardo il personaggio può tentare di usare un oggetto creato per un'altra classe con un 10\% +5\% di probabilità per livello fino ad un massimo di 95\%.
+\item \textbf{Uso oggetti magici (10):} \index{Bardo!Abilità!Uso oggetti magici} Oltre agli oggetti da Canaglia o Bardo il personaggio può tentare di usare un oggetto creato per un'altra classe con un 10\% +5\% di probabilità per livello fino a un massimo di 95\%.
 \item \textbf{Creare Oggetti magici (5):} \index{Bardo!Abilità!Creare oggetti magici} Vedi capitolo \ref{creareoggettimagici}.
 \end{itemize}
 
@@ -5851,7 +5874,7 @@ Probabilità di fallimento: (Livello Incantesimo $\times$ 10) - (Livello Bardo $
 \end{itemize}
 
 
-\section{Abilità e Penalita' opzionali}
+\section{Abilità e Penalità opzionali}
 
 Se il Game Master lo permette potete scegliere come usare i Punti Personaggio scegliendoli anche da questo elenco. \label{chap:tratti-eccezionali}\index{Abilità Eccezionali}\hypertarget{tratti-eccezionali}{}
 
@@ -5878,9 +5901,9 @@ Queste Abilità sono acquistabili solo tramite i Punti Personaggio da parte di t
 
 \item \textbf{Fortuna (10):}\index{Abilità!Fortuna} La fortuna che arride al personaggio consiste nel fatto che questo personaggio sembra avere una predisposizione naturale ad essere nel posto giusto al momento giusto. Il GM potrebbe richiedere una prova di Saggezza per determinare se il personaggio avrà o meno fortuna in una certa situazione. Se, per esempio, il gruppo sta cercando un modo per attraversare un crepaccio e il personaggio fortunato supera una prova di Saggezza troverà poco distante un ponte di corde per attraversarlo.
 
-\item \textbf{Guarigione rapida (5):} \index{Abilità!Guarigione rapida} Questo tratto è molto utile poiché permette al personaggio di recuperare 1 Punto Ferita nel giro di 2d6 turni dal momento in cui lo ha subito. Inoltre, il personaggio guarisce in modo naturale il doppio dei punti ferità al giorno.
+\item \textbf{Guarigione rapida (5):} \index{Abilità!Guarigione rapida} Questo tratto è molto utile poiché permette al personaggio di recuperare 1 Punto Ferita nel giro di 2d6 turni dal momento in cui lo ha subito. Inoltre, il personaggio guarisce in modo naturale il doppio dei Punti Ferita al giorno.
 
-\item \textbf{Gusto acuto (5):} \index{Abilità!Gusto acuto} Questo tratto permette ai personaggi di individuare sostanze estranee ed alterazioni insolite in tutte le cose che assaggiano. I personaggi possono effettuare una prova di Saggezza con un modificatore di +3. Se superano la prova, essi capiscono che i cibi o le bevande sono state alterate in qualche modo. Gli halfling possono acquistare questo tratto per 1 punto in meno rispetto al costo indicato.
+\item \textbf{Gusto acuto (5):} \index{Abilità!Gusto acuto} Questo tratto permette ai personaggi di individuare sostanze estranee ed alterazioni insolite in tutte le cose che assaggiano. I personaggi possono effettuare una prova di Saggezza con un modificatore di +3. Se superano la prova, essi capiscono che i cibi o le bevande sono stati alterati in qualche modo. Gli halfling possono acquistare questo tratto per 1 punto in meno rispetto al costo indicato.
 
 \item \textbf{Imitazione (5):}\index{Abilità!Imitazione} Il personaggio ha l'abilità naturale di interpretare il ruolo di un personaggio e di identificarsi con esso in modo assolutamente credibile. Il personaggio con il tratto dell'Imitazione riceve un bonus di +2 sulle prove della capacità Camuffarsi. Inoltre, il personaggio può assumere una specifica identità immediatamente, cioè senza il beneficio di costumi o trucco.
 
@@ -5896,7 +5919,7 @@ Queste Abilità sono acquistabili solo tramite i Punti Personaggio da parte di t
 
 \item \textbf{Musica/Canto (5):} \index{Abilità!Musica!Canto} Il personaggio con questo tratto ha una voce intonata e melodiosa, cioè il tipo di voce che tutti amano sentir cantare. Se il personaggio abbina questo tratto con la capacità Cantare, può impressionare i propri ascoltatori con spettacoli musicali, magari diventando un bardo o un menestrello di buona reputazione. Inoltre, con questo tratto, il personaggio può aggiunge un bonus di +2 al punteggio della capacità Cantare.
 
-\item \textbf{Olfatto acuto (5):} \index{Abilità!Olfatto acuto} Questo tratto migliora il senso olfattivo del personaggio Abilità ad un livello invidiabile. Nei casi in cui il personaggio è in grado di individuare dall'odore l'avvicinarsi di un altro gruppo, egli riceve un bonus di +1 sulla probabilità di essere sorpreso. Inoltre, questo tratto conferisce al personaggio un bonus di +2 quando utilizza la capacità Cacciare. A discrezione del GM, il personaggio può effettuare una prova di Saggezza/Intuizione per determinare se cibi o bevande sono avvelenate o alterate in qualche maniera.
+\item \textbf{Olfatto acuto (5):} \index{Abilità!Olfatto acuto} Questo tratto migliora il senso olfattivo del personaggio a un livello invidiabile. Nei casi in cui il personaggio è in grado di individuare dall'odore l'avvicinarsi di un altro gruppo, egli riceve un bonus di +1 sulla probabilità di essere sorpreso. Inoltre, questo tratto conferisce al personaggio un bonus di +2 quando utilizza la capacità Cacciare. A discrezione del GM, il personaggio può effettuare una prova di Saggezza/Intuizione per determinare se cibi o bevande sono avvelenate o alterate in qualche maniera.
 
 \item \textbf{Sonno leggero (5):} \index{Abilità!Sonno leggero} Il personaggio riesce a svegliarsi anche a causa del più lieve disturbo: un vantaggio considerevole per un piccolo gruppo di avventurieri in viaggio che potrebbero essere troppo affaticati dai turni di guardia alternati per tutta la notte. Il personaggio si sveglia non appena percepisce un rumore insolito, come i passi di qualcuno che si avvicina all'accampamento. Questo comprende l'avvicinarsi di chiunque indossi un'armatura di metallo, o di creature che portano armi o stanno parlando. Se chi si sta avvicinando si sforza di essere il più silenzioso possibile, il GM può permettere a chi ha la capacità Sonno leggero di effettuare una prova di Saggezza. Se il personaggio con Sonno leggero viene avvicinato da un ladro che ha superato il suo tentativo di Muoversi Silenziosamente, non può effettuare la prova.
 
@@ -6105,7 +6128,7 @@ Il vero bilanciamento del sistema risiede nella gestione dei Punti Esperienza. N
 \end{itemize}
 \textit{Esempio: Se per far avanzare un Mago dal 1$^\circ$ al 2$^\circ$ livello sono necessari 2.500 PE, il giocatore dovrà spendere 5.000 dei suoi PE guadagnati per ottenere quel livello se la classe è secondaria.}
 
-\subsubsection*{Abilità e Incantesimi} Un personaggio multiclasse ha accesso a tutte le capacità e gli incantesimi di tutte le sue classi, al livello che possiede in ciascuna di esse. Un Guerriero 5 / Mago 3 avrà le capacità di un Guerriero di 5$^\circ$ livello e gli incantesimi di un Mago di 3$^\circ$ livello. Gli incantesimi e gli slot giornalieri di ogni classe sono gestiti in modo completamente separato. Viceversa un Mago di 5 / Guerriero di 3, non avraì i PF del guerriero, ne il THAC0, ma potrà avere attacchi multipli, specializzazioni...
+\subsubsection*{Abilità e Incantesimi} Un personaggio multiclasse ha accesso a tutte le capacità e gli incantesimi di tutte le sue classi, al livello che possiede in ciascuna di esse. Un Guerriero 5 / Mago 3 avrà le capacità di un Guerriero di 5$^\circ$ livello e gli incantesimi di un Mago di 3$^\circ$ livello. Gli incantesimi e gli slot giornalieri di ogni classe sono gestiti in modo completamente separato. Viceversa un Mago di 5 / Guerriero di 3, non avrà i PF del guerriero, né il THAC0, ma potrà avere attacchi multipli, specializzazioni...
 
 \textbf{Attenzione:} Le restrizioni di classe rimangono attive. Un Guerriero/Mago non potrà lanciare incantesimi arcani mentre indossa un'armatura.
 
@@ -7085,7 +7108,7 @@ Stregone & 1 & +1 ogni 6 livelli & -5 & 4 &+1 ogni 4 livelli \\
 \bottomrule
 \end{tabularx}
 {\flushleft{\footnotesize{
-I personaggi con Intelligenza alta ricevono linguaggi bonus. Lo stesso bonus si applica anche agli slot di competenze non militari iniziali. Esempio: INT 16 dà +2 linguaggi E +2 slot competenze non militari al 1$^\circ$ livello.
+I personaggi con Intelligenza alta ricevono linguaggi bonus. Lo stesso bonus si applica anche agli slot di competenze non militari iniziali. Esempio: INT 16 dà +4 linguaggi.
 }}}
 
 \begin{multicols}{2}
@@ -7250,7 +7273,7 @@ Le prove di Intimidazione sono modificate dal tuo Mod. Reazione del Carisma o da
 \textbf{Ritento?}\index{Intimidire!Ritento} Ogni prova aggiuntiva sulla stessa creatura entro un'ora subisce una penalità cumulativa di 5. Ottieni +4 se sei di taglia più grande del bersaglio, 4 se sei più piccolo.
 
 \subsubsection*{Percepire Intenzioni}\hypertarget{percepire-intenzioni}{}\hypertarget{ssec:percepire-intenzioni}{}\index[Competenze]{Generiche!Percepire Intenzioni}
-Percepire Intenzioni ti permette di tentare di individuare menzogne ed inganni. Le prove vengono tirate come una prova di Saggezza. Una prova superata ti permette di evitare di essere ingannato da un Raggiro.
+Percepire Intenzioni ti permette di tentare di individuare menzogne e inganni. Le prove vengono tirate come una prova di Saggezza. Una prova superata ti permette di evitare di essere ingannato da un Raggiro.
 
 \textbf{Intuizione:}\index{Percepire Intenzioni!Intuizione} Puoi avere la sensazione che \emph{qualcosa non va} o che qualcuno sia affidabile.
 
@@ -8041,7 +8064,7 @@ Determinare la propria posizione e tracciare rotte usando stelle, sole, punti di
 \textbf{Orientamento e Strumenti:}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item \textbf{Determinare Posizione}: Prova giornaliera. Successo: Posizione accurata ($\pm$10 km). Fallimento di $5+$: Completamente perso ($\pm$200 km).
-\item \textbf{Strumenti}: La Bussola fornisce +2; l'Astrolabio +3; il Sextante +4.
+\item \textbf{Strumenti}: La Bussola fornisce +2; l'Astrolabio +3; il Sestante +4.
 \item \textbf{Modificatori}: Cielo sereno: +2; Cielo coperto: $-4$; Tempesta: $-8$ o impossibile.
 \item \textbf{Correnti}: Riconosce correnti marine e venti, sfruttandoli per aumentare la velocità (+25\%).
 \item \textbf{Applicazioni Terrestri}: Usata per attraversare deserti o foreste senza sentieri.
@@ -8458,7 +8481,7 @@ Con il \textbf{terzo slot} si diventa \textbf{Maestri}. Questo è il grado massi
 
 Con il \textbf{quarto slot} si diventa \textbf{Alti Maestri}. Questo è il grado massimo che un Combattente non Guerriero (Ranger o Paladino o Barbaro) può ottenere.
 
-Con il \textbf{quinto} ed ultimo slot possibile si diventa \textbf{Gran Maestri}, questa opzione è disponibile solo ai Guerrieri puri, che non abbiamo biclassato/multiclassato.
+Con il \textbf{quinto} e ultimo slot possibile si diventa \textbf{Gran Maestri}, questa opzione è disponibile solo ai Guerrieri puri, che non abbiano biclassato/multiclassato.
 
 \subsection{Competenza Base: Familiare}
 
@@ -8663,7 +8686,7 @@ Per armi a distanza, il Gran Maestro mantiene tutti i benefici dell'Alto Maestro
 \bottomrule
 \end{tabularx}
 \footnotesize
-\textbf{Legenda:} I numeri indicano il numero di attacchi per round. Ad esempio, \emph{3/2} significa 3 attacchi ogni 2 round (2 attacchi nel primo round, 1 nel secondo), \emph{2/1} significa 2 attacchi per round, \emph{1/2} significa 1 attacco ogni 2 round.
+\textbf{Legenda:} I numeri indicano il numero di attacchi per round. Ad esempio, \emph{3/2} significa 3 attacchi ogni 2 round (1 attacco nel primo round, 2 nel secondo), \emph{2/1} significa 2 attacchi per round, \emph{1/2} significa 1 attacco ogni 2 round.
 
 \begin{multicols}{2}
 
@@ -8681,7 +8704,7 @@ Gli stili di combattimento sono:
 \item \textbf{Arma a due mani}\index{Combattimento!a Due mani}
 \end{itemize}
 
-Gli Stili sono sceglibili da personaggi almeno Specializzati nell'arma.
+Gli Stili sono selezionabili da personaggi almeno Specializzati nell'arma.
 
 \subsubsection*{Combattimento a Due Armi}\hypertarget{ssec:combattimento-due-armi}{}
 \index{Combattimento!a Due Armi}
@@ -8782,7 +8805,7 @@ Questa specializzazione si articola in due livelli di maestria, ognuno dei quali
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item \textbf{Bonus Difensivo Migliorato:} Il bonus alla Classe Armatura aumenta a \textbf{+2}.
 \item \textbf{Iniziativa Superiore:} Il Fattore di Velocità della sua arma è ridotto di un totale di 2.
-\item \textbf{Manovra Rapida:} Una volta per round, può usare la sua mano libera per tentare di effettuare una manovra ad un avversario. Questo tentativo non sostituisce il suo attacco normale.
+\item \textbf{Manovra Rapida:} Una volta per round, può usare la sua mano libera per tentare di effettuare una manovra contro un avversario. Questo tentativo non sostituisce il suo attacco normale.
 \end{itemize}
 \end{description}
 
@@ -9059,14 +9082,14 @@ La sua velocità di movimento aumenta di 2 metri.
 
 \item[\textbf{Parole Incoraggianti}]\label{talento:parole-incoraggianti}\index{Talenti!Parole Incoraggianti} \textit{Prerequisiti: Carisma 15}
 
-Un numero di volte al giorno pari a liv/2, con una prova di Carisma, può dare a un alleato +2 al Tiro per Colpire ed Tiri Salvezza entro la fine del round successivo.
+Un numero di volte al giorno pari a liv/2, con una prova di Carisma, può dare a un alleato +2 al Tiro per Colpire e ai Tiri Salvezza entro la fine del round successivo.
 
 \item[\textbf{Prodezza Sconcertante*}]\label{talento:prodezza-sconcertante}\index{Talenti!Prodezza Sconcertante}\index{Colpo Critico}
 Con un tiro non modificato di 20 per colpire si tira due volte il danno dell'arma e si sceglie il risultato da tenere.
 
 \item[\textbf{Resiliente*}]\label{talento:resiliente}\index{Talenti!Resiliente} \textit{Prerequisiti: -}
 
-Sceglie due blocchi di Salvezza (Incantesimi, Soffio del Drago, Verga Bacchetta Metamorfosi..) e vi aggiunge un bonus di +2.
+Sceglie due blocchi di Salvezza (Incantesimi, Soffio del Drago, Verga, Bacchetta, Metamorfosi...) e vi aggiunge un bonus di +2.
 
 \item[\textbf{Richiamo Rapido}]\label{talento:richiamo-rapido}\index{Talenti!Richiamo Rapido} \textit{Prerequisiti: Intelligenza o Saggezza 14}
 
@@ -9599,7 +9622,7 @@ di cuoio & +1 & 1  & 0.3 & N/A & N/A & N/A \\
 Grande elmo & +2 & 30  & 4 & N/A & N/A & N/A \\
 \bottomrule
 \end{tabularx}
-{\flushleft{\footnotesize Un Elmo penalizza la possibilità di Sentire Rumori. Cuoio 15\%, cotta di maglia 25\%, grande elmo 40\%.}}
+{\flushleft{\footnotesize Un Elmo penalizza la possibilità di Sentire Rumori. Cuoio 15\%, cotta di maglia 25\%, grande elmo 40\%. Il bonus alla classe armatura si applica solo ai tiri per colpire alla testa.}}
 
 
 \begin{multicols}{2}
@@ -9685,7 +9708,7 @@ Guisarme \textsuperscript{2}\index{Armi!in Asta!Guisarme} & 5 & 3,6 & G & T & 8 
 \rowcolor{gray!20}Lancia\index{Armi!Lancia} & 0.8 & 2,2 & M & P & 6 & 1d6 & 1d8 \\
 Lucern Hammer \textsuperscript{2}\index{Armi!in Asta!Lucern Hammer} & 7 & 5 & G & P/C & 9 & 2d4 & 1d6 \\
 \rowcolor{gray!20}Naginata\textsuperscript{3}\index{Armi!in Asta!Naginata} & 30 & 3 & G & T & 7 & 1d8 & 1d10 \\
-Partigiana \textsuperscript{1,5}\index{Armi!in Asta!Partigiana} & 55 & 5,3 & G & P & 11 & 1d6+1 & 2d6 \\
+Partigiana \textsuperscript{1,5}\index{Armi!in Asta!Partigiana} & 6 & 5,3 & G & P & 11 & 1d6+1 & 2d6 \\
 \rowcolor{gray!20}Picca\textsuperscript{1,5}\index{Armi!in Asta!Picca} & 5 & 4,5 & G & P & 13 & 1d6 & 1d12 \\
 Spetum \textsuperscript{1,5}\index{Armi!in Asta!Spetum} & 5 & 3 & G & P & 8 & 1d6+1 & 2d6 \\
 \midrule
@@ -9763,7 +9786,7 @@ Frusta\index{Armi!Frusta} & 1 & 0,9 & M & - & 8 & 1d2 & 1d2 \\
 \textbf{Legenda:}
 \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0cm]
 \item \textbf{Costo:} mo = monete d'oro, ma = monete d'argento, mr = monete di rame
-\item \textbf{Dim.:} P = Piccola, M = Media, G = Grande. Per una creatura di taglia media un'arma di taglia Media può essere usata ad una mano o a due mani, un'arma Grande deve essere usata a due mani.
+\item \textbf{Dim.:} P = Piccola, M = Media, G = Grande. Per una creatura di taglia media un'arma di taglia Media può essere usata a una mano o a due mani, un'arma Grande deve essere usata a due mani.
 \item \textbf{Tipo:} P = Perforante, T = da Taglio, B = da Botta
 \item \textbf{Vel.:} Fattore di velocità (più basso = più veloce)
 \item \textbf{P-M:} Danno contro creature Piccole e Medie
@@ -11057,7 +11080,7 @@ Paladino & 9 & Cavaliere & Castello (solo se al servizio del bene) \\
 \rowcolor{gray!20}Ranger & 10 & Guardiano & Avamposto nelle terre selvagge \\
 Mago & 9 & Stregone & Torre o santuario arcano \\
 \rowcolor{gray!20}Illusionista & 9 & Gran Illusionista & Torre o sala delle illusioni \\
-Chierico & 9 & Patriarca/Matrarca & Tempio o santuario \\
+Chierico & 9 & Patriarca/Matriarca & Tempio o santuario \\
 \rowcolor{gray!20}Druido & 12 & Gran Druido & Recinto sacro nella natura \\
 Ladro & 9 & Maestro Ladro & Gilda, sede urbana \\
 \rowcolor{gray!20}Bardo & 9 & Maestro Bardo & Collegio bardico, sala dei conviti \\
@@ -11361,7 +11384,7 @@ La sorpresa è letale. Per ridurne le probabilità, siate proattivi. Dichiarate 
 Quando una parte riesce a sorprendere l'altra, ottiene un vantaggio tattico devastante.
 
 \begin{description}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0cm]
-\item[La Parte Sorpresa:] Non può compiere alcuna azione. È totalmente indifesa, perde qualsiasi bonus di Destrezza alla sua Classe Armatura. Un incantatore sorpreso nel mezzo di un lancio perde l'incantesimo.
+\item[La Parte Sorpresa:] Non può compiere alcuna azione. È totalmente indifesa, perde qualsiasi bonus di Destrezza alla sua Classe Armatura. Un incantatore sorpreso nel mezzo di un lancio perde l'incantesimo a meno di riuscire in un Tiro Salvezza su Paralisi.
 
 \item[La Parte che Sorprende:] Ottiene un intero \textbf{round di sorpresa} bonus prima che inizi il combattimento regolare. Durante questo round, può agire liberamente: attaccare, lanciare incantesimi, posizionarsi strategicamente. Gli attacchi in mischia contro un bersaglio sorpreso ottengono un bonus di +1 al Tiro per Colpire.
 \end{description}
@@ -11919,7 +11942,7 @@ La Carica è un'azione speciale che permette di coprire una grande distanza per 
 \subsubsection{Parare}\label{parare}\index{Combattimento!Azioni!Parare}\hypertarget{parare}{}
 La Parata è un'azione completa che permette di usare la propria arma o scudo per difendersi al meglio. \textit{(Regola opzionale dal DMG 2e, capitolo Combattimento Avanzato.)}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
-\item \textbf{Azione:} E' l'unica azione del round.
+\item \textbf{Azione:} È l'unica azione del round.
 \item \textbf{Procedura:} Ti difendi al meglio delle tue possibilità, guadagni un bonus alla Classe Armatura pari a metà del livello, se sei un Combattente il bonus aumenta di 1. Il bonus si applica solo agli attacchi in mischia frontali.
 \item \textbf{Rischio:} Se vieni colpito con un 20 naturale, c'è una probabilità di 1 su 6 che il tuo scudo o la tua arma si danneggi.
 \end{itemize}
@@ -11940,7 +11963,7 @@ Non è una vera e propria azione di combattimento quando si decide di allontanar
 
 \subsubsection{Difesa Totale}\label{sssec:difesa-totale}\index{Combattimento!Azioni!Difesa Totale}\hypertarget{difesatotale}{}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
-\item \textbf{Azione:} E' l'unica azione del round.
+\item \textbf{Azione:} È l'unica azione del round.
 \item \textbf{Procedura:} Ti difendi al meglio delle tue possibilità, guadagni un bonus alla Classe Armatura pari a +2. Il bonus si applica agli attacchi frontali e laterali.
 \item \textbf{Rischio:} Se vieni colpito con un 20 naturale, c'è una probabilità di 1 su 6 che il tuo scudo o la tua arma si danneggi.
 \end{itemize}
@@ -12111,7 +12134,7 @@ Un attacco non letale con un'arma non idonea, non calci o pugni, prende un -2 al
 
 sono armi a spargimenti quelle che \emph{spargono} il loro contenuto dove cadono, ad esempio olio incendiato/Acqua santa... Una arma a spargimento ha una gittata di 3/6/9 metri\index{Lanciare Armi a Spargimento}\index{Gittata armi a spargimento}.
 
-In caso l'attacco manchi ed il d20 del Tiro per Colpire sia tra 1-4 tirare un d8 e consultare questo schema per capire dove la fiala è caduta e tira un 2d6 per determinare lungo la direzione indicata dal d8 precedente a quanti metri è caduto distante dal bersaglio, ovvero contate i metri dal bersaglio.
+In caso l'attacco manchi e il d20 del Tiro per Colpire sia tra 1-4 tirare un d8 e consultare questo schema per capire dove la fiala è caduta e tira un 2d6 per determinare lungo la direzione indicata dal d8 precedente a quanti metri è caduto distante dal bersaglio, ovvero contate i metri dal bersaglio.
 
 \medskip
 \begin{center}
@@ -12130,7 +12153,7 @@ In caso l'attacco manchi ed il d20 del Tiro per Colpire sia tra 1-4 tirare un d8
 
 Ad esempio con il tiro del d8 faccio 5 e poi tirando 2d6 faccio 4, significa che la boccetta è caduta a destra del bersaglio a 4 metri.
 
-È anche possibile che ci si sia tirati sui piedi la boccetta (es faccio 7 e poi 6.. potrei averla tirata addosso ad un compagno o dietro di me!).
+È anche possibile che ci si sia tirati sui piedi la boccetta (es. faccio 7 e poi 6... potrei averla tirata addosso a un compagno o dietro di me!).
 
 %\begin{enfasi}
 %Quando le spade si abbassano e le lame tacciono, inizia la vera battaglia: quella della volontà contro la volontà, della forza contro la forza.
@@ -12164,7 +12187,7 @@ nascosto al 75\% & -7 & -3 \\
 {\footnotesize {* Copertura Solida. \\
 La copertura fornisce un modificatore negativo al Tiro per Colpire dell'attaccante.\\}}
 
-La copertura solida aiuta anche nei tiri salvezza\index{Tiro Salvezza (TS)}, garantendo al personaggio lo stesso modificatore come bonus ai suoi tiri salvezza contro incantesimi che causano danni fisici ad area (es. \href{SADE-Incantesimi-vol1.pdf\#inc:"Palla di Fuoco"}{\emph{Palla di Fuoco}}, \href{SADE-Incantesimi-vol1.pdf\#inc:"Fulmine Magico"}{\emph{Fulmine Magico}}.
+La copertura solida aiuta anche nei tiri salvezza\index{Tiro Salvezza (TS)}, garantendo al personaggio lo stesso modificatore come bonus ai suoi tiri salvezza contro incantesimi che causano danni fisici ad area (es. \href{SADE-Incantesimi-vol1.pdf\#inc:"Palla di Fuoco"}{\emph{Palla di Fuoco}}, \href{SADE-Incantesimi-vol1.pdf\#inc:"Fulmine Magico"}{\emph{Fulmine Magico}}).
 
 Un personaggio con il 90\% di copertura subisce solo la metà del danno normale in caso di Tiro Salvezza fallito e nessun danno se ha successo.
 
@@ -12232,6 +12255,13 @@ Quando un personaggio viene colpito da una creatura che risucchia energia (come 
 \item Se un personaggio di livello 0 subisce un altro risucchio, muore all'istante.
 \end{itemize}
 
+\subsection{Ferite, Moribondo e Morte}\label{ferite-morte}\index{Ferite}\index{Morte}\index{Moribondo}
+Quando i Punti Ferita (PF) di un personaggio vengono ridotti dal danno, le sue condizioni peggiorano:
+\begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
+\item \textbf{A 0 PF o meno (Moribondo):} Il personaggio cade a terra privo di sensi ed è indifeso. All'inizio di ogni round successivo, perde 1 ulteriore Punto Ferita per dissanguamento, a meno che non venga stabilizzato.
+\item \textbf{Stabilizzare:} Una prova riuscita dell'abilità \hyperlink{nwp:primo-soccorso}{Primo Soccorso} (o un incantesimo di guarigione) stabilizza immediatamente il personaggio: la perdita di PF si arresta, ma egli rimane privo di sensi finché i suoi PF non tornano positivi.
+\item \textbf{Morte (-10 PF):} Se i Punti Ferita scendono a -10 (oppure se il danno subito in un singolo colpo porta i PF a un valore negativo pari o superiore ai PF massimi del personaggio), egli muore definitivamente. Solo potenti incantesimi come \hyperlink{ssec:resuscitare}{\emph{Rianimare Morti}} o \emph{Resurrezione} possono riportarlo in vita.
+\end{itemize}
 
 \begin{enfasi}
 Non è la morte che un uomo dovrebbe temere, ma dovrebbe temere di non iniziare mai a vivere.
@@ -12378,7 +12408,7 @@ Se due creature di taglia simile sono costrette nello stesso quadretto, sono \te
 
 
 \subsection{Essere Proni o a terra}\index{Condizioni!Prono}\label{cond:prono}\hypertarget{prono}{}\label{cond:aterra}\hypertarget{aterra}{}
-Incinocchiarsi o gettarsi a terra, non costa azioni o movimento. Tirarsi su da prono o da in ginocchio è considerata una azione da metà movimento, tirarsi su da terra è considerata una azione completa.
+Inginocchiarsi o gettarsi a terra, non costa azioni o movimento. Tirarsi su da prono o da in ginocchio è considerata una azione da metà movimento, tirarsi su da terra è considerata una azione completa.
 
 
 \subsection{Passare per Strettoie}\index{Movimento!in Strettoie}
@@ -12444,10 +12474,10 @@ Una creatura con una velocità di scalata innata, come un ragno gigante, ignora 
 
 Il movimento in volo segue principi simili al movimento a terra ma introduce concetti specifici legati alla tridimensionalità e all'agilità in aria. Le creature volanti, o quelle che ottengono la capacità di volare tramite magia, possiedono una Velocità di Volo e una Classe di Manovrabilità.
 
-\subsubsection{Velocità di Volo (Moviment Rate (MR))}
+\subsubsection{Velocità di Volo (Movement Rate (MR))}
 \index{Volo!Velocità}\index{Movement Rate (MR)!Volo}
 
-La velocità di volo è indicata da un valore di Movimento, proprio come per il movimento a terra. Questo valore rappresenta la distanza massima, solitamente espressa in metri, che la creatura può coprire in un round di combattimento standard (circa 1 minuto in esplorazione, ma le regole di combattimento aereo usano round più brevi, spesso 10 secondi,dove la distanza coperta è MR $\times$ 10 metri per round di combattimento
+La velocità di volo è indicata da un valore di Movimento, proprio come per il movimento a terra. Questo valore rappresenta la distanza massima, solitamente espressa in metri, che la creatura può coprire in un round di combattimento standard (circa 1 minuto in esplorazione, ma le regole di combattimento aereo usano round più brevi, spesso 10 secondi, dove la distanza coperta è MR $\times$ 10 metri per round di combattimento).
 
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item \textbf{Volo Standard:} Il valore indicato nelle statistiche del mostro o nella descrizione dell'incantesimo/oggetto magico (es. \textit{Volo}, \textit{Scopa Volante}).
@@ -12536,7 +12566,7 @@ E  & 30$^\circ$ (12m) & NO & Fortezze volanti \\
 \bottomrule
 \end{tabularx}
 
-\subsubsection{Regole Aggiuntive:}
+\subsubsection{Regole Aggiuntive}
 \index{Volo!Regole Aggiuntive}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item \textbf{Movimento Minimo:} Le creature di Classe C, D ed E devono solitamente muoversi di almeno un quarto o metà della loro velocità massima ogni round per evitare di stallare e cadere.
@@ -12671,7 +12701,7 @@ Un personaggio che si prepara (impiegando 1 round intero per respirare profondam
 
 \textbf{Salire e Scendere}\index{Salire e Scendere in acqua}
 
-Un personaggio può discendere in acqua di 6 metri a round, tuffandosi può aggiungere 3 metri nel primo round e per ogni 3 metri di altezza del tuffo può discendere di altri 1,5 metri fino ad un massimo di addizionale di 6 metri. Per ogni categoria di ingombro oltre la prima aumenta il movimento di discesa di 0,5 metri a round.
+Un personaggio può discendere in acqua di 6 metri a round, tuffandosi può aggiungere 3 metri nel primo round e per ogni 3 metri di altezza del tuffo può discendere di altri 1,5 metri fino a un massimo addizionale di 6 metri. Per ogni categoria di ingombro oltre la prima aumenta il movimento di discesa di 0,5 metri a round.
 
 Un personaggio può risalire dall'acqua per 6 metri a round. Questo movimento viene ridotto di 0,5 metri per ogni categoria di ingombro oltre il non ingombrato. Una creatura priva di senso risale 0,5 metri a round in meno di quanto potrebbe farlo nuotando.
 
@@ -12977,7 +13007,7 @@ Un personaggio con la competenza Sopravvivenza ottiene bonus al TS pari al numer
 
 I personaggi incoscienti o privi di sensi iniziano a subire danni senza TS.
 
-Un personaggio che subisce danni a causa dell'esposizione al caldo, è soggetto ad un colpo di calore ed è Affaticato. Queste penalità terminano quando il personaggio recupera completamente i danni subiti a causa del caldo.
+Un personaggio che subisce danni a causa dell'esposizione al caldo, è soggetto a un colpo di calore ed è Affaticato. Queste penalità terminano quando il personaggio recupera completamente i danni subiti a causa del caldo.
 
 \textbf{Caldo Infernale}
 
@@ -12989,7 +13019,7 @@ L'acqua bollente infligge 1d6 danni da scottatura per round di contatto parziale
 
 \label{prendere-fuoco}
 
-I personaggi esposti ad olio bollente, fuochi da campo, fuochi magici non istantanei possono vedere i loro abiti, capelli o equipaggiamento prendere fuoco. Gli incantesimi specificano nella descrizione se sono in grado di appiccare il fuoco.
+I personaggi esposti a olio bollente, fuochi da campo, fuochi magici non istantanei possono vedere i loro abiti, capelli o equipaggiamento prendere fuoco. Gli incantesimi specificano nella descrizione se sono in grado di appiccare il fuoco.
 
 I personaggi che rischiano di prendere fuoco devono effettuare un Tiro Salvezza contro Soffio del Drago per evitare questo fato. Se i vestiti o i capelli di un personaggio prendono fuoco, egli subisce immediatamente 1d6 danni.
 
@@ -13097,7 +13127,7 @@ In questi casi, ad ogni minuto di esposizione alla grandine, il personaggio subi
 
 La neve è considerata terreno difficile (movimento dimezzato).
 
-La neve spegne automaticamente le fiamme Piccole non protette ed ha una probabilità del 50\% di spegnere quelle Grandi non protette. Impone penalità di -4 ai Tiri per Colpire a distanza ed alle prove di Ascoltare.
+La neve spegne automaticamente le fiamme Piccole non protette e ha una probabilità del 50\% di spegnere quelle Grandi non protette. Impone penalità di -4 ai Tiri per Colpire a distanza e alle prove di Ascoltare.
 
 Un giorno di neve lascia sul terreno 1d6 centimetri di neve.
 
@@ -13200,7 +13230,7 @@ Un vento sostenuto, che ha una probabilità del 50\% di estinguere qualsiasi pic
 
 \textbf{Vento Forte}
 
-Folate che spengono automaticamente le fiamme non protette (candele, torce e simili). Queste folate impongono penalità di -2 ai Tiri per Colpire a distanza ed alle prove di Ascoltare.
+Folate che spengono automaticamente le fiamme non protette (candele, torce e simili). Queste folate impongono penalità di -2 ai Tiri per Colpire a distanza e alle prove di Ascoltare.
 
 \textbf{Vento Molto Forte}
 
@@ -13234,7 +13264,7 @@ I personaggi che si trovano nelle immediate vicinanze di un tornado (entro 30 me
 
 Coloro che entrano in contatto con il tornado vengono sollevati da terra e sbatacchiati per 1d10 round, subendo 6d6 danni per round, prima di venirne espulsi violentemente. La creatura viene espulsa da un'altezza di 1d6 \texttimes{} 3 metri per round di permanenza nel tornado (più danni da caduta quando atterra: 1d6 per ogni 3 metri).
 
-Sebbene la velocità rotatoria di un tornado possa raggiungere i 450 km/h, il cono stesso si muove in avanti ad una media di 45 km/h (circa 75 metri per round, o 7,5 metri al round in scala combattimento).
+Sebbene la velocità rotatoria di un tornado possa raggiungere i 450 km/h, il cono stesso si muove in avanti a una media di 45 km/h (circa 75 metri per round, o 7,5 metri al round in scala combattimento).
 
 Un tornado è in grado di sradicare alberi, distruggere edifici e provocare altre forme di simile devastazione.
 
@@ -13289,15 +13319,15 @@ Il dungeon è inclinato. Le creature sono infuriate perché non riescono a gioca
 \label{avventure-nei-dungeon}
 
 
-Di tutti i luoghi strani che un avventuriero può esplorare, nessuno è più letale di un dungeon. Questi labirinti, pieni di trappole mortali, mostri affamati e tesori meravigliosi, provano ogni abilità e capacità dei personaggi. Queste regole si possono applicare a qualsiasi tipo di dungeon, dal relitto di una nave ad un vasto complesso di grotte sotterranee.
+Di tutti i luoghi strani che un avventuriero può esplorare, nessuno è più letale di un dungeon. Questi labirinti, pieni di trappole mortali, mostri affamati e tesori meravigliosi, provano ogni abilità e capacità dei personaggi. Queste regole si possono applicare a qualsiasi tipo di dungeon, dal relitto di una nave a un vasto complesso di grotte sotterranee.
 
 Che siano caverne, antri, cave, grotte, tane, spelonche i \emph{Dungeon} rappresentano spesso il centro focale dell'avventura, dell'esplorazione e sopravvivenza.
 
 I personaggi passeranno molto tempo in questi ambienti ed il Game Master deve essere preparato e pronto sull'ambiente che incontreranno.
 
-Quando si prepara una caverna è necessario ragionare in maniera intelligente sul tipo di caverna e sulle creature che si andranno ad incontrare, ogni caverna è un complesso ecosistema.
+Quando si prepara una caverna è necessario ragionare in maniera intelligente sul tipo di caverna e sulle creature che si andranno a incontrare, ogni caverna è un complesso ecosistema.
 Mettere un gruppo di lucertoloidi senza pensare a cosa mangiano, dove dormono, che tipo di organizzazione hanno è pericoloso, per non parlare di inserire una chimera.
-Avrà le ali atrofizzate perché la caverna è alta 3 metri e larga 3 e fa fatica a muoversi ? Di cosa si è nutrita in questo periodo ? Piuttosto meglio usare una gorgone che si nutre di minerali...
+Avrà le ali atrofizzate perché la caverna è alta 3 metri e larga 3 e fa fatica a muoversi? Di cosa si è nutrita in questo periodo? Piuttosto meglio usare una gorgone che si nutre di minerali...
 
 Se progettato con attenzione e cura una caverna può diventare un'ottima esperienza di incontri, situazioni ed avventura.
 
@@ -13595,7 +13625,7 @@ In aree sotterranee profonde o sigillate, l'aria può diventare viziata. Persona
 
 \textbf{Penalità cumulative}: +0 la prima ora, -1 la seconda ora, -2 la terza ora, ecc.
 
-Un personaggio che fallisce il TS diventa Affaticato (-1 a tutti i tiri d'attacco, -1 alla CA [peggiora], movimento ridotto a 2/3 (cioè -1/3 dal totale).
+Un personaggio che fallisce il TS diventa Affaticato (-1 a tutti i tiri d'attacco, -1 alla CA [peggiora], movimento ridotto a 2/3, cioè -1/3 dal totale).
 
 Un personaggio già Affaticato che fallisce il TS diventa Esausto (-4 a tutti i tiri d'attacco, -4 alla CA, movimento ridotto a 1/2 (cioè -1/2 dal totale), non può correre o caricare).
 
@@ -13632,7 +13662,7 @@ Se un personaggio già Affaticato fallisce un ulteriore TS, diventa Esausto.
 
 Dormire in armatura media o pesante rende automaticamente Affaticati al risveglio.
 
-Non si riesce a dormire 8 ore complete ad intervalli minori di 16 ore.\index{Dormire più volte al giorno}
+Non si riesce a dormire 8 ore complete a intervalli minori di 16 ore.\index{Dormire più volte al giorno}
 
 Se il personaggio viene svegliato e coinvolto in un'attività impegnativa come combattere, lanciare incantesimi, cavalcare... e questa si protrae per più di 1 turno (10 minuti), il riposo è interrotto e il personaggio deve ricominciare da capo il periodo di 8 ore.
 
@@ -13705,7 +13735,7 @@ Camminare & 36m& 54m& 72m \\
 \rowcolor{gray!20}Camminare& 3km& 4km& 6km\\
 Correre (x2) & 6km& 8km & 12km \\
 \rowcolor{gray!20}\textbf{Un giorno (Via Terra)}&&&\\
-Camminare& 24km & 32km & 54km\\
+Camminare& 21km & 32km & 43km\\
 \bottomrule
 \end{tabularx}
 
@@ -13752,7 +13782,8 @@ Armatura: A piastre (tutti i tipi) & -50\% \\
 Armatura: Cuoio borchiato, imbottita & -5\% \\
 \rowcolor{gray!20}Razza: Mezzi giganti & +10\% \\
 Razza: Nano & -10\% \\
-\rowcolor{gray!20}Razza: Gnomi o Halfling & -15\% \\
+\rowcolor{gray!20}Razza: Gnomo & -5\% \\
+Razza: Halfling & -15\% \\
 %Ingombro\index{Ingombro!e Scalata} & -5\% \\
 Superficie: Leggermente scivolosa (bagnata o friabile) & -25\% \\
 \rowcolor{gray!20}Superficie: Scivolosa (ghiacciata, viscida) & -40\% \\
@@ -14610,7 +14641,7 @@ Queste magie sono quelle che vengono definite \emph{memorizzate}. Per lanciare u
 Un incantatore può lanciare quante volte vuole al giorno gli incantesimi di \textbf{0 Livello} memorizzati.
 
 \subsubsection{Scuole di Magia}
-Sebbene tutti gli incantesimi da mago vengano appresi e memorizzati allo stesso modo, essi rientrano in dieci diverse scuole di magia. Una scuola di magia è un gruppo di incantesimi correlati.
+Sebbene tutti gli incantesimi da mago vengano appresi e memorizzati allo stesso modo, essi rientrano nelle seguenti undici scuole di magia. Una scuola di magia è un gruppo di incantesimi correlati.
 
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item \textbf{Abiurazione:} Gli incantesimi di abiurazione sono un gruppo di incantesimi protettivi specializzati. Ciascuno è usato per prevenire o bandire qualche effetto o creatura, magica o non magica. Sono spesso usati per fornire sicurezza in momenti di grande pericolo o quando si tenta qualche altro incantesimo particolarmente rischioso.
@@ -14709,6 +14740,8 @@ La Sfera del Sole governa la luce, il calore e il potere purificatore del sole. 
 \textbf{Sfera del Tempo Atmosferico}\index{Sfere (Sacerdote)!Tempo Atmosferico}
 I sacerdoti con accesso a questa sfera possono influenzare e controllare i fenomeni atmosferici. Possono evocare nebbia per nascondere i loro movimenti, chiamare fulmini dal cielo per colpire i loro nemici, o creare venti potenti per ostacolare gli avversari. Al culmine del loro potere, possono persino evocare vere e proprie tempeste. Questa sfera è comune tra le divinità della natura, del cielo e del mare.
 
+\textit{Nota sulle Sfere di Influenza:} Oltre alle quattordici sfere canoniche qui descritte, la creazione tramite Punti Personaggio e le fedi dei culti specifici includono sfere addizionali come Caos, Fato, Legge, Numeri, Pensiero, Tempo e Viaggio (vedi Tabella \hyperlink{tab:costi-sfere}{Costi per Accesso alle Sfere} a pag. \pageref{tab:costi-sfere}).
+
 
 \subsection{Imparare gli Incantesimi}
 Sia che un personaggio scelga di essere un mago generico o uno specialista in una delle scuole di magia, deve imparare i suoi incantesimi da qualche parte. Sebbene possa essere possibile per un mago eccezionale apprendere i segreti della conoscenza arcana interamente da solo, non è molto probabile. È molto più probabile che il vostro personaggio sia stato apprendista presso un altro mago da ragazzo. Questo maestro gentile (severo), amorevole (insensibile), comprensivo (irascibile), generoso (meschino) e retto (inaffidabile) ha insegnato al vostro personaggio tutto ciò che sa all'inizio del gioco. Poi, quando è giunto il momento, il maestro lo ha mandato nel mondo (l'ha cacciato via) con un sorriso e una pacca sulla spalla (ringhiando con un piede sul sedere del vostro personaggio).
@@ -14738,7 +14771,7 @@ Perché un'illusione funzioni, deve essere credibile. La credibilità è determi
 \begin{enumerate}
 \item \textbf{La conoscenza dell'incantatore:} Un'illusione basata su qualcosa che l'incantatore ha visto e conosce di persona sarà molto più dettagliata e realistica. Creare l'immagine di un troll visto in battaglia risulterà più convincente dell'immagine di un panopticon di cui si è solo sentito parlare.
 
-\item \textbf{Le aspettative della vittima:} L'illusione deve essere plausibile nel contesto in cui appare. Un drago che combatte al fianco di un gruppo di koboldi è un'immagine poco credibile e facile da mettere in dubbio. Un gruppo di orchi che appare come rinforzo, invece, si inserisce in uno scenario molto più probabile.
+\item \textbf{Le aspettative della vittima:} L'illusione deve essere plausibile nel contesto in cui appare. Un drago che combatte al fianco di un gruppo di coboldi è un'immagine poco credibile e facile da mettere in dubbio. Un gruppo di orchi che appare come rinforzo, invece, si inserisce in uno scenario molto più probabile.
 
 \item \textbf{La coerenza della situazione:} L'inganno deve essere completo e stimolare più sensi. Un'illusione puramente visiva di un'armata di cavalieri che carica in silenzio è intrinsecamente sospetta. La mancanza del suono degli zoccoli e del clangore delle armi ne tradisce la natura fittizia.
 \end{enumerate}
@@ -14866,7 +14899,7 @@ Era il tipo di magia che doveva essere tenuta sotto chiave, preferibilmente in u
 Alcuni incantatori, noti come \textbf{Maghi Selvaggi}\index{Mago!Specialista!Mago Selvaggio}, non cercano di imbrigliare questa forza, ma di cavalcarla come un'onda. Abbracciano il caos, scatenando effetti sbalorditivi che possono salvare la situazione o peggiorarla in modi spettacolari.
 
 \subsubsection*{Il Mago Selvaggio}\hypertarget{mago-selvaggio}{}
-Il Mago Selvaggio è una scuola di specializzazione alternativa per i Maghi. A differenza delle altre scuole, non si concentra su un tipo di effetto, ma su una fonte di potere. Per questo motivo, un Mago Selvaggio non ha scuole di opposizione ma ha un -15\% ad imparare ogni altro incantesimo di Scuola non Selvaggia! Il caos tocca ogni aspetto della magia.
+Il Mago Selvaggio è una scuola di specializzazione alternativa per i Maghi. A differenza delle altre scuole, non si concentra su un tipo di effetto, ma su una fonte di potere. Per questo motivo, un Mago Selvaggio non ha scuole di opposizione ma ha un -15\% a imparare ogni altro incantesimo di Scuola non Selvaggia! Il caos tocca ogni aspetto della magia.
 
 \begin{giocatore}[Abbracciare il Caos]
 Giocare un Mago Selvaggio significa accettare che non tutto andrà secondo i piani. A volte trasformerai il nemico in una pecora, altre volte farai spuntare una barba di piume al tuo guerriero. Il tuo ruolo è quello di essere una fonte di sorprese e divertimento (e a volte di panico). Non temere un risultato negativo sulla tabella: spesso sono i fallimenti più spettacolari a creare le storie migliori.
@@ -14982,6 +15015,12 @@ Si distrugge rompendo il suo recipiente. Un oggetto magico ottiene un bonus al s
 \vfill
 
 \begin{center}
+\includegraphics[width=\linewidth]{immagini/dungeon22.png}
+\end{center}
+
+\medskip
+
+\begin{center}
 
 \includegraphics[keepaspectratio,width=\linewidth]{immagini/dungeon20.png}
 
@@ -15002,7 +15041,7 @@ I dogmi qui presentati sono quanto è stato ricordato dalla lettura de \textit{I
 
 \bigskip
 
-\subsection{Incantesimi aggiuntivi:} Gli incantesimi aggiuntivi indicati sono incantesimi che il Chierico può scegliere di studiare anche se non appartengono a Sfere da lui conosciute.
+\subsection{Incantesimi aggiuntivi} Gli incantesimi aggiuntivi indicati sono incantesimi che il Chierico può scegliere di studiare anche se non appartengono a Sfere da lui conosciute.
 
 \paragraph{Regola per Incantesimi di Alto Livello:} \textit{(Nota: gli incantesimi sacerdotali di 8$^\circ$ e 9$^\circ$ livello non esistono nel PHB 2e classico i sacerdoti arrivano al 7$^\circ$ livello. Questo sistema è tratto da \textit{Player's Option: Spells \& Magic}.)} Gli incantesimi di 8$^\circ$ e 9$^\circ$ livello presenti in queste liste sono manifestazioni supreme del potere divino e richiedono un'immensa esperienza. Un chierico può scegliere e lanciare il suo primo incantesimo di 8$^\circ$ livello al raggiungimento del 17$^\circ$ livello, e un secondo all'18$^\circ$. Il primo incantesimo di 9$^\circ$ livello può essere lanciato al 19$^\circ$ livello, e un secondo al 20$^\circ$.
 \end{multicols}
@@ -15252,7 +15291,7 @@ Forse pessimisti o ottimisti per natura, predicano l'agnosticismo universale, co
 
 \subsubsection*{Seeyek - L'Avventura}\index{Seeyek}\hypertarget{seeyek}{}\label{seeyek}
 
-Dato che il dio gli concede diverse sfere, praticamente le più usate, non è dotato di peculiari poteri, e nel complesso non si discosta dal chierico generico. Autentici self-made man. I chierici di Seeyek sono fondamentalmente buoni e sanno essere validi compagni, fedeli ed onesti.
+Dato che il dio gli concede diverse sfere, praticamente le più usate, non è dotato di peculiari poteri, e nel complesso non si discosta dal chierico generico. Autentici self-made man. I chierici di Seeyek sono fondamentalmente buoni e sanno essere validi compagni, fedeli e onesti.
 
 \begin{enfasi}
 I chierici di Seeyek sono avventurieri, cercatori di gloria e fama, amiconi e protettori del gruppo. Ed al gruppo molto è legato il suo credo e la loro forza.
@@ -15282,7 +15321,7 @@ I chierici di Seeyek sono avventurieri, cercatori di gloria e fama, amiconi e pr
 \begin{enfasi}
 I chierici della dea Daraka bramano il potere, con qualsiasi mezzo possa essere ottenuto.
 \end{enfasi}
-Se Daern è il culto positivo principale, quello della dea Daraka è il malvagio più noto. I chierici di Daraka non fanno nascondimento del loro credo e con le loro scure vesti girano per le strade a cercare accoliti o ad eseguire le loro oscure trame. È l'unico culto, malvagio, che abbia pubbliche chiese nelle maggiori città.
+Se Daern è il culto positivo principale, quello della dea Daraka è il malvagio più noto. I chierici di Daraka non fanno nascondimento del loro credo e con le loro scure vesti girano per le strade a cercare accoliti o a eseguire le loro oscure trame. È l'unico culto, malvagio, che abbia pubbliche chiese nelle maggiori città.
 \paragraph{Dogmi di Daraka:}
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item Diffondere il culto imponendo il terrore della dea
@@ -15452,7 +15491,7 @@ L'aggancio è l'evento che trascina i personaggi nella storia. Senza un buon agg
 \end{itemize}
 
 \begin{narratore}[Rendere l'avventura personale]
-Un avventura è più efficace quando si lega al background o all'allineamento di almeno un personaggio. Se nel gruppo c'è un Paladino, un appello per difendere gli innocenti sarà quasi irresistibile. Se c'è un Ladro con debiti, la promessa di un tesoro facile sarà molto allettante. Usa ciò che sai dei personaggi per farli sentire direttamente coinvolti nella storia.
+Un'avventura è più efficace quando si lega al background o all'allineamento di almeno un personaggio. Se nel gruppo c'è un Paladino, un appello per difendere gli innocenti sarà quasi irresistibile. Se c'è un Ladro con debiti, la promessa di un tesoro facile sarà molto allettante. Usa ciò che sai dei personaggi per farli sentire direttamente coinvolti nella storia.
 \end{narratore}
 
 \subsubsection{L'Ambientazione (ed il Setting)}\index{Avventura!Ambientazione}
@@ -15710,7 +15749,7 @@ L'ammontare è a totale discrezione del GM, ma una buona regola è basarlo sulla
 Una volta calcolato il totale dei PE guadagnati in una sessione o avventura, questo ammontare viene diviso equamente tra tutti i Personaggi Giocanti (PG) che hanno partecipato.
 \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
 \item \textbf{PNG e Seguaci:} Se Personaggi Non Giocanti (PNG) o seguaci hanno contribuito in modo significativo al successo, essi contano per una \emph{mezza parte} o una \emph{parte intera} ai fini della divisione. L'esperienza che spetterebbe loro viene solitamente scartata, riducendo di fatto il totale ricevuto dai PG. Questo simula il supporto ricevuto.
-\item I personaggi che hanno 16 o più nel requisito primario della classe prendono +5\% all'esperienza totale gudagnata.
+\item I personaggi che hanno 16 o più nel requisito primario della classe prendono +5\% all'esperienza totale guadagnata.
 \end{itemize}
 
 \subsection{Costruire gli Incontri}
@@ -15940,7 +15979,7 @@ La tabella seguente elenca le pietre più comuni per ciascuna categoria, come ri
 \rowcolor{gray!20}\textbf{Categoria} & \textbf{Pietre tipiche} \\
 \midrule
 Ornamentali & Azzurrite, agata, quarzo blu, ematite, ossidiana, lapislazzuli \\
-\rowcolor{gray!20}Semipreziose & Corniola, crisopraso, citrino, onice, pietra di luna, quarzo rosa \\
+\rowcolor{gray!20}Semipreziose & Corniola, crisoprasio, citrino, onice, pietra di luna, quarzo rosa \\
 Pregiate & Ambra, ametista, corallo, giada, granato rosso, perla bianca \\
 \rowcolor{gray!20}Rare & Acquamarina, granato viola, perla nera, spinello blu, topazio dorato \\
 Eccezionali & Smeraldo, zaffiro blu, rubino, opale di fuoco, rubino stellato \\
@@ -16252,7 +16291,7 @@ La \textbf{complessità intrinseca dell'oggetto} influisce pure: oggetti semplic
 
 Infine, l'\textbf{assistenza} di altri incantatori può aiutare: un assistente qualificato (livello 5+) garantisce +5\%, e ogni assistente aggiuntivo (massimo 2) dà ulteriori +2\% ciascuno.
 
-Avere \textbf{fretta}, dimezzando i tempi di preparazione, causa un 20\% di penalità nella prova mentre andare \textbf{tremendamente di fretta}, ridurre ad un quarto i tempi, causa una penalità del 50\% alla prova!.
+Avere \textbf{fretta}, dimezzando i tempi di preparazione, causa un 20\% di penalità nella prova mentre andare \textbf{tremendamente di fretta}, ridurre a un quarto i tempi, causa una penalità del 50\% alla prova!
 
 La probabilità finale calcolata non può comunque essere inferiore al 5\% né superiore al 95\%, indipendentemente dai modificatori. C'è sempre una piccola possibilità di fallimento catastrofico e una piccola possibilità che anche il creatore meno esperto riesca miracolosamente.
 
@@ -16345,7 +16384,7 @@ Probabilità: 60\% + Livello (13$^\circ$ - 11$^\circ$ minimo = +10\%) + Saggezza
 Silvanus tira 82: successo! Il bastone è completato e contiene 25 cariche.
 
 \paragraph{Esempio 5: Tentativo Rischioso.}
-Il mago Malachar, 11$^\circ$ livello con Intelligenza 14, è in viaggio e ha urgente bisogno di una pergamena con \href{SADE-Incantesimi-vol1.pdf\#inc:"Volare"}{Volare}. Non ha accesso al suo laboratorio e deve improvvisare in una stanza di locanda. Per risparmiare, usa pergamena economica (che non da bonus ne penalità). Il processo richiederebbe 4 giorni ma lui ha tremendamente fretta, riducendo i tempi ad un solo giorno!
+Il mago Malachar, 11$^\circ$ livello con Intelligenza 14, è in viaggio e ha urgente bisogno di una pergamena con \href{SADE-Incantesimi-vol1.pdf\#inc:"Volare"}{Volare}. Non ha accesso al suo laboratorio e deve improvvisare in una stanza di locanda. Per risparmiare, usa pergamena economica (che non dà bonus né penalità). Il processo richiederebbe 4 giorni ma lui ha tremendamente fretta, riducendo i tempi a un solo giorno!
 
 Probabilità: 60\% + Livello (11$^\circ$ = minimo, +0\%) + Intelligenza 14 (+5\%) + Condizioni precarie (-10\%) + Oggetto semplice (+5\%) -50\% tremendamente fretta = \textbf{10\%}.
 
@@ -16472,7 +16511,7 @@ Le armi e le armature magiche seguono regole specifiche.
 \subsection{Tiri Salvezza e Danni agli Oggetti Magici e non}\label{ssec:ts_oggetti}\index{Oggetti Magici!Tiri Salvezza}
 Quando un oggetto magico è esposto a un effetto che potrebbe danneggiarlo (come il soffio di un drago) e non è indossato o quando il suo portatore fallisce il Tiro Salvezza, allora effettua un Tiro Salvezza come indicato dalla \hyperlink{tsoggetti}{Tabella Tiri Salvezza oggetti}.
 
-Gli oggetti magici con un bonus (una spada +1, per esempio) guadagnano quel bonus come bonus al tiro di dado. Se l'oggetto possiede abilità speciali aggiuntive, dovrebbe avere un bonus extra per ciascuna di queste. Gli oggetti magici senza bonus dichiarati dovrebbero ottenere un bonus relativo al loro potere. Una pozione avrebbe un +1 mentre un oggetto magico miscellaneo potrebbe avere un +5 o +6. Inoltre, se il Tiro Salvezza è contro un attacco che il dispositivo è stato progettato per contrastare (ad es., freddo estremo contro un \hyperlink{obj:Scalfarotti del tepore}{Scalfarotti del tepore}, è consentito un bonus aggiuntivo di +2.
+Gli oggetti magici con un bonus (una spada +1, per esempio) guadagnano quel bonus come bonus al tiro di dado. Se l'oggetto possiede abilità speciali aggiuntive, dovrebbe avere un bonus extra per ciascuna di queste. Gli oggetti magici senza bonus dichiarati dovrebbero ottenere un bonus relativo al loro potere. Una pozione avrebbe un +1 mentre un oggetto magico miscellaneo potrebbe avere un +5 o +6. Inoltre, se il Tiro Salvezza è contro un attacco che il dispositivo è stato progettato per contrastare (ad es. freddo estremo contro gli \hyperlink{obj:Scalfarotti del tepore}{Scalfarotti del tepore}), è consentito un bonus aggiuntivo di +2.
 
 \end{multicols}
 
@@ -17727,7 +17766,7 @@ Legno, sottile & 9 & 13 & 19 & 2 & 11 & 9 & 2 & 10 & 2 \\
 \item \makebox[4.5em][l]{1--7}\hspace{1em}\hyperlink{obj:Cappa della Montagna}{Cappa della Montagna}
 \item \makebox[4.5em][l]{8--14}\hspace{1em}\hyperlink{obj:Mantello Elfico}{Mantello Elfico}
 \item \makebox[4.5em][l]{15--21}\hspace{1em}\hyperlink{obj:Mantello Velenoso}{Mantello Velenoso}
-\item \makebox[4.5em][l]{22--28}\hspace{1em}\hyperlink{obj:Mantello degli Arachnidi}{Mantello degli Arachnidi}
+\item \makebox[4.5em][l]{22--28}\hspace{1em}\hyperlink{obj:Mantello degli Aracnidi}{Mantello degli Aracnidi}
 \item \makebox[4.5em][l]{29--35}\hspace{1em}\hyperlink{obj:Mantello dei Pipistrelli}{Mantello dei Pipistrelli}
 \item \makebox[4.5em][l]{36--42}\hspace{1em}\hyperlink{obj:Mantello del Ciarlatano}{Mantello del Ciarlatano}
 \item \makebox[4.5em][l]{43--49}\hspace{1em}\hyperlink{obj:Mantello del Manta}{Mantello del Manta}
@@ -19258,7 +19297,7 @@ Quando si ottiene un colpo critico con quest'arma +1 contro una creatura vivente
 \textbf{Costo:} 15.000 mo
 \textbf{Rarità:} Molto Raro
 
-Un'Arma della Velocita', solitamente una spada corta o lunga, permette a chi la impugna di effettuare un attacco aggiuntivo per round. Questo non si cumula con incantesimi o effetti magici che garantiscono attacchi extra (come l'incantesimo \href{SADE-Incantesimi-vol1.pdf\#inc:"Velocità"}{\emph{Velocità}}).
+Un'Arma della Velocità, solitamente una spada corta o lunga, permette a chi la impugna di effettuare un attacco aggiuntivo per round. Questo non si cumula con incantesimi o effetti magici che garantiscono attacchi extra (come l'incantesimo \href{SADE-Incantesimi-vol1.pdf\#inc:"Velocità"}{\emph{Velocità}}).
 
 \oggettomagico{Arma Vorpal}
 \index[OggettiMagici]{Arma!Vorpal}
@@ -19847,7 +19886,7 @@ Questa borsa sembra essere una normale borsa di monete, spesso piena di quelle c
 
 Questo borsello di cuoio o stoffa, una volta che è stato tenuto in possesso da una singola persona per almeno una settimana, inizia a produrre monete magicamente. Ogni giorno all'alba, nel borsello compaiono da 51 a 150 (1d100+50) monete.
 
-Il tipo di moneta prodotto è determinato casualmente la prima volta che il borsello crea monete per un nuovo proprietario (tira 1d100: 01-30 Rame, 31-60 Argento, 61-80 Electro, 81-95 Oro, 96-00 Platino) e rimane fisso per quel proprietario.
+Il tipo di moneta prodotto è determinato casualmente la prima volta che il borsello crea monete per un nuovo proprietario (tira 1d100: 01-30 Rame, 31-60 Argento, 61-80 Electrum, 81-95 Oro, 96-00 Platino) e rimane fisso per quel proprietario.
 
 Le monete create sono reali ma possiedono una particolare restrizione magica: svaniscono senza traccia se vengono donate liberamente, usate per scopi caritatevoli o religiosi, o se vengono usate per pagare tasse o decime a organizzazioni religiose o templi. Qualsiasi tentativo di aggirare questa restrizione (ad esempio, scambiandole prima con altre monete per poi donarle) fa svanire le monete originali. Possono, tuttavia, essere spese liberamente per acquisti personali, gioco d'azzardo o altre attività non caritatevoli.
 
@@ -20813,7 +20852,7 @@ Lanciare incantesimi con componenti verbali è impossibile. L'effetto dura per 2
 \textbf{Costo:} 200 mo
 \textbf{Rarità:} Raro
 
-Questo filtro piuttosto denso deve essere conservatao in un contenitore metallico.
+Questo filtro piuttosto denso deve essere conservato in un contenitore metallico.
 Chi lo beve può assumere qualsiasi tinta o combinazione di tinte desiderate a volontà.
 Qualsiasi colore o combinazione di colori è possibile, se l'utilizzatore mantiene il pensiero nella sua mente abbastanza a lungo perché la tinta abbia effetto.
 Se la pozione è bevuta con parsimonia, una fiala produrrà fino a sette dosi della durata di un'ora ciascuna.
@@ -21253,7 +21292,7 @@ Questo pesante tomo, se letto per una settimana (8 ore al giorno), conferisce a 
 \textbf{Costo:} 12.500 mo
 \textbf{Rarità:} Molto Raro
 
-Questo tomo, pesante solo mezzo kilo, è rilegato in ferro ricoperto d'argento, è impermeabile ed è dotato di una serratura.
+Questo tomo, pesante solo mezzo chilo, è rilegato in ferro ricoperto d'argento, è impermeabile ed è dotato di una serratura.
 Contiene 1.000 pagine.
 
 La sua proprietà magica principale è che un mago può trascrivere i suoi incantesimi sulle pagine di questo libro senza dover pagare il costo in materiali (monete d'oro) normalmente richiesto per la scrittura. Il tempo necessario per la trascrizione rimane invariato.
@@ -21328,7 +21367,7 @@ Inoltre, il maglio ignora la durezza degli oggetti non magici e infligge danni r
 
 Questa mano mummificata, se lasciata in una stanza, può tentare di rubare un piccolo oggetto (non più grande di una moneta) e riportarlo al suo proprietario. La mano ha le abilità di un ladro di 3$^\circ$ livello (Borseggiare 40\%) e può essere usata una volta al giorno.
 
-\oggettomagico{Mantello degli Arachnidi}
+\oggettomagico{Mantello degli Aracnidi}
 \index[OggettiMagici]{Mantello!degli Arachnidi}
 \textbf{Aura:} Trasmutazione e Invocazione moderata
 \textbf{Costo:} 15.000 mo
@@ -21516,7 +21555,7 @@ Il destino non è scritto nelle stelle, ma forse in queste carte. Ogni figura pr
 
 Questo potente oggetto magico appare come un mazzo di carte da tarocchi o da gioco, solitamente contenuto in una scatola d'avorio, d'ebano o di altro materiale prezioso. Un \emph{Mazzo delle Meraviglie} completo è composto da 22 carte, ma ne esistono versioni ridotte da 13 carte.
 
-Prima di pescare una carta, il personaggio deve dichiarare quante carte intende pescare da quel mazzo. Le carte pescate devono essere estratte immediatamente. Se il personaggio non pesca il numero dichiarato, le carte rimanenti (fino al numero dichiarato) volano fuori dal mazzo ed hanno effetto tutte in una volta.
+Prima di pescare una carta, il personaggio deve dichiarare quante carte intende pescare da quel mazzo. Le carte pescate devono essere estratte immediatamente. Se il personaggio non pesca il numero dichiarato, le carte rimanenti (fino al numero dichiarato) volano fuori dal mazzo e hanno effetto tutte in una volta.
 
 Una volta pescata, una carta sprigiona la sua magia istantaneamente ed è consumata, scomparendo per sempre. Fa eccezione la carta \textbf{Il Matto} e il \textbf{Giullare}, che vengono rimescolate nel mazzo.
 
@@ -21616,7 +21655,7 @@ Questo medaglione permette a un incantatore di immagazzinare un incantesimo fino
 \textbf{Costo:} 7.000 mo
 \textbf{Rarità:} Raro
 
-Questo medaglione conferisce a chi lo indossa la capacità di proiettare i propri pensieri nella mente di altre creature, simile all'abilità psionica  \href{SADE-Incantesimi-vol2.pdf\#psi:"Proiezione Telempatica"}{Proiezione Telempatica}.
+Questo medaglione conferisce a chi lo indossa la capacità di proiettare i propri pensieri nella mente di altre creature, simile all'abilità psionica  \href{SADE-Incantesimi-vol2.pdf\#psi:"Proiezione Telepatica"}{Proiezione Telepatica}.
 
 Chi lo indossa, concentrandosi, può inviare messaggi telepatici a una creatura consenziente o non consenziente entro un raggio di 27 metri. La creatura bersaglio \emph{sente} i pensieri proiettati come se fossero i propri o come una voce distinta nella sua mente (a seconda dell'intenzione di chi invia).
 
@@ -22711,7 +22750,7 @@ Il GM può selezionarne uno dalla tabella sottostante o fare un tiro percentuale
 \bottomrule
 \end{tabularx}
 
-Il cerchio magico dalla lettura della pergamena si estende in un raggio di 10 piedi (3 emtri) e si muove con il lettore.
+Il cerchio magico dalla lettura della pergamena si estende in un raggio di 10 piedi (3 metri) e si muove con il lettore.
 Ogni pergamena protegge contro 49 Dadi Vita di licantropi, arrotondando per difetto tutti i bonus dei Punti Ferita a meno che non superino +2.
 La protezione è per il resto simile a quella contro gli elementali, sopra.
 La protezione dai mutaforma protegge contro i mostri (eccetto dei e creature simili a dei) capaci di cambiare la loro forma in quella dell'uomo: doppelganger, certi draghi, druidi, jackalwere e licantropi, per esempio.
@@ -22841,7 +22880,7 @@ Chi porta con sé questo quadrifoglio essiccato e conservato magicamente può, u
 \textbf{Costo:} 800 mo
 \textbf{Rarità:} Raro
 
-Questo congegno gnomesca, se attivato, spara una rete appiccicosa che copre un'area di 3 metri per 3. Le creature nell'area devono superare un Tiro Salvezza contro Paralisi o rimanere intralciate. La rete ha 10 Punti Ferita e può essere distrutta. È un oggetto monouso.
+Questo congegno gnomesco, se attivato, spara una rete appiccicosa che copre un'area di 3 metri per 3. Le creature nell'area devono superare un Tiro Salvezza contro Paralisi o rimanere intralciate. La rete ha 10 Punti Ferita e può essere distrutta. È un oggetto monouso.
 
 \oggettomagico{Ramo dell'Albero del Mondo}
 \index[OggettiMagici]{Ramo!dell'Albero del Mondo}
@@ -23928,7 +23967,7 @@ Questa verga può assorbire l'energia degli incantesimi. Può assorbire un total
 
 La verga del deperimento è un'arma magica +1.
 Un colpo da essa causa 1d4+1 punti di danno. Se due cariche vengono spese quando si mette a segno un colpo, la creatura colpita invecchia anche di 10 anni, con le sue abilità e durata di vita adeguate all'aumento di età risultante.
-Se tre cariche vengono spese quando si mette a segno un colpo, uno degli arti della creatura avversaria può essere fatto raggrinzire e diventare inutile a meno che non riesca ad effettuare un Tiro Salvezza contro incantesimo (controlla a caso quale arto viene colpito).
+Se tre cariche vengono spese quando si mette a segno un colpo, uno degli arti della creatura avversaria può essere fatto raggrinzire e diventare inutile a meno che non riesca a effettuare un Tiro Salvezza contro incantesimo (controlla a caso quale arto viene colpito).
 Le creature immortali (non morti, demoni, diavoli, ecc.) non possono essere invecchiate o deperite.
 Ogni effetto della verga è cumulativo, così che tre cariche infliggeranno danno, invecchieranno e deperiranno.
 Invecchiare un nano ha poco effetto, mentre invecchiare un drago potrebbe effettivamente aiutare la creatura.
@@ -24025,7 +24064,7 @@ Le funzioni simili a incantesimi della verga sono:
 \end{itemize}
 
 Ogni funzione attinge una carica dalla verga.
-Le funzioni danno diritto alle vittime a tiri salvezza contro incantesimi, con l'eccezione della funzione di drenaggio sopra, questa richiede un colpo riuscito durante il combattimento corpo a corpo.
+Le funzioni danno diritto alle vittime a tiri salvezza contro incantesimi, con l'eccezione della funzione di drenaggio sopra descritta, che richiede un colpo riuscito durante il combattimento corpo a corpo.
 Gli usi dell'arma della verga non usano cariche. Questi sono:
 \begin{itemize}[topsep=4pt, itemsep=2pt, parsep=0pt, leftmargin=*]
 \item mazza +2
@@ -24216,9 +24255,9 @@ La verga conferisce +1 al tiro di dado del possessore per essere sorpreso, e in 
 Se è afferrata saldamente, la verga permette al personaggio di individuare allineamento, male, bene, illusioni, invisibilità, bugie, o magia.
 L'uso di questi poteri di individuazione non spende alcuna delle cariche nella verga.
 Se la verga di vigilanza è piantata nel terreno, e il possessore la attiva alla vigilanza, la verga \emph{sentirà} qualsiasi creatura intende fare del male al possessore.
-Ognuna delle flange sulla testa della verga lancia allora un incantesimo luce lungo una delle direzioni principali (N, NE, E, ecc.) fino a una gittata di 60 piedi (18 metri) .
-Allo stesso tempo, la verga crea l'effetto di un incantesimo preghiera su tutte le creature amichevoli al possessore in un raggio di 20 piedi (6 metri) .
-Immediatamente dopo, la verga invia un allarme mentale a queste creature amichevoli, avvertendole di possibile pericolo dalle creature non amichevoli entro il raggio di 120 piedi (35 metri) .
+Ognuna delle flange sulla testa della verga lancia allora un incantesimo luce lungo una delle direzioni principali (N, NE, E, ecc.) fino a una gittata di 60 piedi (18 metri).
+Allo stesso tempo, la verga crea l'effetto di un incantesimo preghiera su tutte le creature amichevoli al possessore in un raggio di 20 piedi (6 metri).
+Immediatamente dopo, la verga invia un allarme mentale a queste creature amichevoli, avvertendole di possibile pericolo dalle creature non amichevoli entro il raggio di 120 piedi (35 metri).
 Infine, la verga può essere usata per simulare il lancio di un incantesimo anima oggetti, utilizzando qualsiasi 16 (o meno) oggetti specialmente designati dal possessore e posti approssimativamente attorno al perimetro di un cerchio di 6 piedi (2 metri) di raggio centrato sulla verga.
 Gli oggetti selezionati possono essere 16 arbusti, 16 rami appositamente sagomati, o qualsiasi altra cosa.
 Tutte le funzioni protettive della verga richiedono una carica. Il potere anima oggetti richiede una carica aggiuntiva, così, se tutti i dispositivi protettivi della verga sono utilizzati in una volta, due cariche sono spese.
@@ -24474,7 +24513,7 @@ Una terra nordica vedrebbe il piano di Ysgard come dominante su tutti gli altri,
 \chapter{Le Condizioni}\label{condizioni}\index{Condizioni}
 
 \begin{narratore}[Nota sul sistema delle Condizioni]
-Il sistema delle Condizioni presentato in questo capitolo (Accecato, Prono, Stordito, Spaventato, ecc.) è ispirato alla nomenclatura unificata delle nuove edizioni. Nel PHB/DMG AD\&D 2e classico non esiste un elenco formalizzato di condizioni: gli effetti sono descritti caso per caso nei singoli incantesimi, capacità e mostri. Questo capitolo serve come \textbf{riferimento rapido} per il tavolo, non come regola aggiuntiva riunisce terminologia già usata nel resto del manuale in un unico posto.
+Il sistema delle Condizioni presentato in questo capitolo (Accecato, Prono, Stordito, Spaventato, ecc.) è ispirato alla nomenclatura unificata delle nuove edizioni. Nel PHB/DMG AD\&D 2e classico non esiste un elenco formalizzato di condizioni: gli effetti sono descritti caso per caso nei singoli incantesimi, capacità e mostri. Questo capitolo serve come \textbf{riferimento rapido} per il tavolo, non come regola aggiuntiva: riunisce la terminologia già usata nel resto del manuale in un unico posto.
 \end{narratore}
 
 %\begin{enfasi}
@@ -24516,10 +24555,10 @@ Una creatura stordita non può compiere azioni, perde il suo bonus di Destrezza 
 
 \item[Prono:]\index{Condizioni!Prono}
 
-Un personaggio si può sedere, inginocchiare o gettarsi a terra senza consumare l'azione. Mettersi in piedi da seduto o in ginocchio è considerata un azione di mezzo movimento (e quindi il personaggio può alzarsi e effettuare un attacco con un'arma a distanza o in melee). Alzarsi in piedi da prono/sdraiato è trattato come una azione completa e quindi non è possibile fare nient'altro.
+Un personaggio si può sedere, inginocchiare o gettarsi a terra senza consumare l'azione. Mettersi in piedi da seduto o in ginocchio è considerata un'azione di mezzo movimento (e quindi il personaggio può alzarsi e effettuare un attacco con un'arma a distanza o in melee). Alzarsi in piedi da prono/sdraiato è trattato come una azione completa e quindi non è possibile fare nient'altro.
 
 Un personaggio prono ha la CA migliorata di 2 contro attacchi a distanza, ma peggiorata di 4 contro gli attacchi in mischia.
-Può usare una balestra o un'arma di taglia piccola. Gli attacchi con la balestra hanno un Cadenza di tiro (CdT) di 1 ogni 2 round.
+Può usare una balestra o un'arma di taglia piccola. Gli attacchi con la balestra hanno una Cadenza di tiro (CdT) di 1 ogni 2 round.
 
 
 \item[Affaticato:]\index{Condizioni!Affaticato}\hypertarget{faticacond}{}\hypertarget{affaticato}{}
@@ -24572,7 +24611,7 @@ Per ripristinare il bilanciamento originale, i seguenti capitoli o sezioni devon
 
 \item[Classi Moderne:] Rimuovi lo \textbf{Stregone}, il \textbf{Magus} ed il \textbf{Templare}.
 
-\item[Razze Aggiuntive:] a discrizione del Game Master possono essere tenuti solo Umani, Elfi, Nani, Gnomi, Halfling.
+\item[Razze Aggiuntive:] a discrezione del Game Master possono essere tenuti solo Umani, Elfi, Nani, Gnomi, Halfling.
 
 \item[Competenze:] I personaggi non possono usare i Punti Personaggi per acquistare {Slot Competenza} per Competenze Militari e Competenze non militari.
 
@@ -24869,7 +24908,7 @@ Al 10$^\circ$ livello, il Ranger attira 2d6 seguaci speciali (animali, creature 
 
 \subsubsection*{Progressione e Statistiche}
 
-Il Ranger condivide Dadi Vida, THAC0 e la progressione dei Tiri Salvezza del Guerriero ma usa la tabella di Punti Esperienza del Paladino.
+Il Ranger condivide Dadi Vita, THAC0 e la progressione dei Tiri Salvezza del Guerriero ma usa la tabella di Punti Esperienza del Paladino.
 
 
 \captionof{table}{Abilità Furtive del Ranger (Ambienti Naturali)}\label{tab:furtivita-ranger}\hypertarget{tab:furtivita-ranger}{}
@@ -25197,7 +25236,7 @@ Fantasma o 10 DV\index{Scacciare Non-Morti!Fantasma} & -- & -- & -- & -- & -- & 
 Speciali\index{Scacciare Non-Morti!Speciali} & -- & -- & -- & -- & -- & -- & -- & -- & 20 & 19 & 16 & 13 \\
 \bottomrule
 \end{xltabular}
-{\flushleft{\footnotesize{Un numero indica il risultato necessario su 2d10 per scacciare. \textbf{T} = Scaccia automaticamente; \textbf{D} = Distrugge; \textbf{D*} = Distrugge 2d4 creature addizionali di questo tipo. Un trattino (--) indica che lo scacciare fallisce automaticamente. Lo Scacciare i non morti agisce raggio di 27 metri.}\\
+{\flushleft{\footnotesize{Un numero indica il risultato necessario su 1d20 per scacciare. \textbf{T} = Scaccia automaticamente; \textbf{D} = Distrugge; \textbf{D*} = Distrugge 2d4 creature addizionali di questo tipo. Un trattino (--) indica che lo scacciare fallisce automaticamente. Lo Scacciare i non morti agisce in un raggio di 27 metri.}\\
 † I Paladini scacciano i non-morti come sacerdoti di due livelli inferiori.
 Le creature speciali includono non-morti unici, non-morti con libero arbitrio del Piano dell'Energia Negativa, certi Poteri Maggiori e Inferiori, e quei non-morti che dimorano nei Piani Esterni.}}
 
@@ -25585,7 +25624,7 @@ Sentire Rumori & 20\% \\
 \chapter{Appendice N: Letture Ispiratrici}\label{chap:appendice-n}\index{Appendice N}\hypertarget{chap:appendice-n}{}
 
 \begin{enfasi}
-Gary Gygax concluse il Dungeon Masters Guide del 1979 con un elenco di romanzi e racconti: quei libri erano la materia prima di D\&D, i mondi e i personaggi che avevano convinto lui e i suoi collaboratori che questo tipo di gioco era possibile. La tradizione merita di essere mantenuta. Quello che segue è la lista dei libri, autori e opere che hanno ispirato SADE, il suo tono, le sue meccaniche e le sue scelte di design.
+Gary Gygax concluse la Dungeon Master's Guide del 1979 con un elenco di romanzi e racconti: quei libri erano la materia prima di D\&D, i mondi e i personaggi che avevano convinto lui e i suoi collaboratori che questo tipo di gioco era possibile. La tradizione merita di essere mantenuta. Quello che segue è la lista dei libri, autori e opere che hanno ispirato SADE, il suo tono, le sue meccaniche e le sue scelte di design.
 \end{enfasi}
 
 \begin{multicols}{2}
@@ -25658,11 +25697,17 @@ I seguenti volumi sono stati prodotti in parallelo a questo manuale e ne costitu
 
 \end{multicols}
 
+\vfill
+
+\begin{center}
+\includegraphics[width=\linewidth]{immagini/dungeon23.png}
+\end{center}
+
 \pagebreak
 
 \chapter{Immagini e Licenza}
 
-\section{Copertina ed Immagini}
+\section{Copertina e Immagini}
 
 La copertina è generata da \url{https://oubliette.bin.sh/}, Geomorphs by Dyson Logos
 
@@ -25686,7 +25731,7 @@ Il testo completo della licenza è disponibile all'indirizzo:
 
 \medskip
 
-\textit{SADE} è un'opera fan non ufficiale ispirata ad \textit{Advanced Dungeons\& Dragons 2\textsuperscript{a} Edizione} (TSR, Inc.\ / Wizards of the Coast, Inc.\ / Hasbro, Inc.). Non è affiliata, approvata né sponsorizzata da Wizardsof the Coast o Hasbro.
+\textit{SADE} è un'opera fan non ufficiale ispirata ad \textit{Advanced Dungeons \& Dragons 2\textsuperscript{a} Edizione} (TSR, Inc.\ / Wizards of the Coast, Inc.\ / Hasbro, Inc.). Non è affiliata, approvata né sponsorizzata da Wizards of the Coast o Hasbro.
 
 
 \bigskip
