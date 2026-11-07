@@ -11,7 +11,7 @@
 [![Pagine: 1500+](https://img.shields.io/badge/Pagine-1500%2B-blue.svg)](#i-manuali)
 [![Incantesimi: 839](https://img.shields.io/badge/Incantesimi-839-9b59b6.svg)](#i-manuali)
 [![Mostri: 396](https://img.shields.io/badge/Mostri-396-8b0000.svg)](#i-manuali)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/buzzqw)
 
 **[📖 Scarica il Manuale Base](SADE.pdf) · 🔮 Incantesimi [Vol. I](SADE-Incantesimi-vol1.pdf) / [Vol. II](SADE-Incantesimi-vol2.pdf) · [👹 Mostruario](SADE-MonstruousManual.pdf) · [🛡️ Schermo del Master](screengem.pdf)**
 
@@ -79,7 +79,7 @@ Gli altri file (`SADE-Incantesimi-vol1.tex`, `SADE-Incantesimi-vol2.tex`, `SADE-
 
 S.AD.E. è un progetto scritto e mantenuto da una sola persona, nel tempo libero, per passione verso questo gioco. Se lo trovi utile al tuo tavolo e vuoi ringraziare l'autore, puoi offrirgli un caffè tramite PayPal — ogni contributo è molto apprezzato e aiuta a tenere vivo il progetto.
 
-[![Dona con PayPal](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project)
+[![Dona con PayPal](https://img.shields.io/badge/Donate-PayPal-00457C.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=azanzani@gmail.com&item_name=Support+SADE+Project) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/buzzqw)
 
 ## Licenza
 
